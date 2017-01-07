@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.mycompany.myfirstindoorsapp"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionName "4.2.0"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile(name: 'indoors-library-surface-4.3.0', ext: 'aar')
+    compile 'com.android.support:support-v13:23.4.0'
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.0'
+    compile 'com.google.guava:guava:14.0.1'
+    compile 'com.google.protobuf:protobuf-java:2.4.1'
+    compile 'org.slf4j:slf4j-api:1.7.0'
+}
