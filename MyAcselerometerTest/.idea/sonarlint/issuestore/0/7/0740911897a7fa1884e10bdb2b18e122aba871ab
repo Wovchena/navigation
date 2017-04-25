@@ -1,0 +1,17 @@
+
+S"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(€ñ™®þÿÿÿÿ
+`squid:S1192"FDefine a constant instead of duplicating this literal "%1.3f" 4 times.(ùÛ¥¢þÿÿÿÿ
+Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+e
+squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(ô±Éûÿÿÿÿ
+esquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(€ñ™®þÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ÎÉÈ¤
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ÜÅËŽ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÐŠß±
+jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÎÉÈ¤
+jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÜÅËŽ
+„squid:S1151"jReduce this switch case number of lines from 18 to at most 5, for example by extracting code into methods.(ô±Éûÿÿÿÿ
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ã‰Äáûÿÿÿÿ
+hsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(´‰«úÿÿÿÿ

@@ -1,0 +1,13 @@
+
+Nsquid:S1481"-Remove this unused "position" local variable.(ÒË†ıûÿÿÿÿ8‚¼áÿ¹+
+rsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô88‚¼áÿ¹+
+ssquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±»”ƒ8‚¼áÿ¹+
+Nsquid:S1481"-Remove this unused "velocity" local variable.(—„©½ÿÿÿÿÿ8‚¼áÿ¹+
+rsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÕÂ8‚¼áÿ¹+
+xsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªú âûÿÿÿÿ8‚¼áÿ¹+
+ssquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¢å”8‚¼áÿ¹+
+]squid:S1854"<Remove this useless assignment to local variable "velocity".(—„©½ÿÿÿÿÿ8‚¼áÿ¹+
+hsquid:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(¬Ê…Ã8‚¼áÿ¹+
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ê…Ã8‚¼áÿ¹+
+]squid:S1854"<Remove this useless assignment to local variable "position".(ÒË†ıûÿÿÿÿ8‚¼áÿ¹+
+xsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡°“Šüÿÿÿÿ8‚¼áÿ¹+

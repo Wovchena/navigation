@@ -1,0 +1,12 @@
+
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿÂŸ«
+@squid:S1905"&Remove this unnecessary cast to "int".(¹ä Üøÿÿÿÿ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ÂžÅúÿÿÿÿ
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ËµÆüùÿÿÿÿ
+[squid:S1192"GDefine a constant instead of duplicating this literal "coord" 11 times.(±‚M
+_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾¸÷y
+@squid:S1905"&Remove this unnecessary cast to "int".(Â«Ïÿÿÿÿÿ
+8squid:S2131"Use "Double.toString" instead.(§øí¡üÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿ“ðÈýÿÿÿÿ
+7squid:S2131"Use "Float.toString" instead.(Ó¤×æüÿÿÿÿ
