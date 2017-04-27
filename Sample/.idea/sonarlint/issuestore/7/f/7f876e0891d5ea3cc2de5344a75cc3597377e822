@@ -1,2 +1,4 @@
 
-Wsquid:S2094"BRemove this empty class, write its code or make it an "interface".(Ú¦Ì‰
+Msquid:S1135"2Complete the task associated to this TODO comment.(¤ÔÉ8œû’‡»+
+†squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(á÷–Šúÿÿÿÿ8 ùš†»+
+squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ªáç8 ùš†»+

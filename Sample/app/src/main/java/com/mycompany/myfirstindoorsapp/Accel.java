@@ -1,5 +1,7 @@
 package com.mycompany.myfirstindoorsapp;
 
+import android.content.Context;
+import android.graphics.pdf.PdfDocument;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,17 +13,20 @@ import android.util.Log;
  */
 
 public class Accel implements SensorEventListener {
+    PagedActivity pa;
     private SensorManager mSensorManager;
     private float[] accelData = new float[3];
     private float[] magnetData = new float[3];
     private float[] rotationMatrix = new float[16];
     private float[] OrientationData = new float[3];
 
-    public Accel(SensorManager sm) // you can get SensorManager by msensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+    public Accel(PagedActivity pa, SensorManager sm) // you can get SensorManager by msensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
     {
         // TODO also pass map rotation from indoo.rs
         // TODO also pass instance of Kalman
         mSensorManager = sm;
+        this.pa=pa;
+
     }
 
     public void start(int mode) {
@@ -48,6 +53,7 @@ public class Accel implements SensorEventListener {
         SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
         SensorManager.getOrientation(rotationMatrix, OrientationData);
         //TODO rotate and call method of Kalman to work with this data
+        pa.onAccelChanged(accelData);
     }
 
     @Override

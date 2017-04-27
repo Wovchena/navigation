@@ -11,3 +11,5 @@ l
 <app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java,3/4/34186a1960cf5386446a1eb9ffa227068b0a9618
 m
 =app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java,2/d/2dc323f483f985ee86c64b4263e6e76becbd519b
+q
+Aapp/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java,3/2/32dfc5bf1061fa5b8debd6a1b2d9ae3f214388e1

@@ -1,20 +1,11 @@
 
 osquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÆ³¬üÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ãµÇöùÿÿÿÿ
+Isquid:S1066"/Merge this if statement with the enclosing one.(Ïžóæøÿÿÿÿ
+Bsquid:S1068"-Remove this unused "connected" private field.(Õ¶¹Ÿ
+Ksquid:S2696"6Make the enclosing method "static" or remove this set.(·Ô¦›
+Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø
+Gsquid:S1135"2Complete the task associated to this TODO comment.(Þ©Ú§
+Lsquid:S1135"2Complete the task associated to this TODO comment.(“Óÿ‚ûÿÿÿÿ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
 ›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ
 –squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªëÅ®
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(·Ô¦›
-Tsquid:S1161":Add the "@Override" annotation above this method signature(ìþ–Èúÿÿÿÿ
-Isquid:S1066"/Merge this if statement with the enclosing one.(Ïžóæøÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™ª¢„ýÿÿÿÿ
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ò˜Ö¤
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Þ©Ú§
-Osquid:S1161":Add the "@Override" annotation above this method signature(¸ýéü
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(­¼¶®
-Bsquid:S1068"-Remove this unused "connected" private field.(Õ¶¹Ÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(äè¸Þ
-Lsquid:S1135"2Complete the task associated to this TODO comment.(“Óÿ‚ûÿÿÿÿ
-lsquid:UselessImportCheck"DRemove this unused import 'android.support.v4.app.FragmentActivity'.(¸­¯D8„•ê±¸+

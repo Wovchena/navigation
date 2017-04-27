@@ -17,18 +17,17 @@ import org.apache.commons.math3.random.RandomGenerator;
  */
 
 public class Kalman {
-    int dt; // time of new accel (20 ms?)
+    long dt; // time of new accel (20 ms?)
     double accelNoise; // its sqrt(dispertion)
     double measurementNoise; // its sqrt(dispertion)
     KalmanFilter filter;
 
 
-void Kalman(double accelNoise, double measurementNoise, RealVector x)
-{
-    // x = [ 0 0 ] initial coordinates. from example:
-    //RealVector x = new ArrayRealVector(new double[] { 0, 0 });
-    this.accelNoise=accelNoise;
-    this.measurementNoise=measurementNoise;
+    void Kalman(double accelNoise, double measurementNoise, RealVector x) {
+        // x = [ 0 0 ] initial coordinates. from example:
+        //RealVector x = new ArrayRealVector(new double[] { 0, 0 });
+        this.accelNoise = accelNoise;
+        this.measurementNoise = measurementNoise;
     /*        A - state transition matrix
         B - control input matrix
         H - measurement matrix
@@ -41,55 +40,53 @@ void Kalman(double accelNoise, double measurementNoise, RealVector x)
     0 1 0  dt
     0 0 1  0
     0 0 0  1*/
-    RealMatrix A = new Array2DRowRealMatrix(new double[][]{{1, 0, dt, 0},
-            {0, 1, 0, dt},
-            {0, 0, 1, 0},
-            {0, 0, 0, 1}});
+        RealMatrix A = new Array2DRowRealMatrix(new double[][]{{1, 0, dt, 0},
+                {0, 1, 0, dt},
+                {0, 0, 1, 0},
+                {0, 0, 0, 1}});
 /*    B
     (dt^2)/2 0
     0 (dt^2)/2
     dt 0
     0 dt*/
-    RealMatrix B = new Array2DRowRealMatrix(new double[][]{{Math.pow(dt, 2d) / 2d, 0},
-            {0, (dt^2)/2},
-            {dt, 0,},
-            {0, dt,}});
+        RealMatrix B = new Array2DRowRealMatrix(new double[][]{{Math.pow(dt, 2d) / 2d, 0},
+                {0, (dt ^ 2) / 2},
+                {dt, 0,},
+                {0, dt,}});
 /*    H
     1 0 0 0
     0 1 0 0*/
-    //TODO check how mesurement phase is performed
-    RealMatrix H = new Array2DRowRealMatrix(new double[][]{{1, 0, 0, 0},
-            {0, 1, 0, 0d}});
+        //TODO check how mesurement phase is performed
+        RealMatrix H = new Array2DRowRealMatrix(new double[][]{{1, 0, 0, 0},
+                {0, 1, 0, 0d}});
 
-    //TODO Q matrix (cov)
-    // это матожидание квадрата разностей
-    //Q=accelNoise*B*BT
-    RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise*accelNoise);
-    // P0 = [ 999 0 ]
+        //TODO Q matrix (cov)
+        // это матожидание квадрата разностей
+        //Q=accelNoise*B*BT
+        RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise * accelNoise);
+        // P0 = [ 999 0 ]
 //      [ 0 999 ]
-    RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{999, 0}, {999, 0}});
+        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{999, 0}, {999, 0}});
 
-    // R = [ measurementNoise^2 ]
-    RealMatrix R = new Array2DRowRealMatrix(new double[]{Math.pow(measurementNoise, 2)});
+        // R = [ measurementNoise^2 ]
+        RealMatrix R = new Array2DRowRealMatrix(new double[]{Math.pow(measurementNoise, 2)});
 
 
-    ProcessModel pm = new DefaultProcessModel(A, B, Q, x, P0);
-    MeasurementModel mm = new DefaultMeasurementModel(H, R);
-    KalmanFilter filter = new KalmanFilter(pm, mm);
-}
+        ProcessModel pm = new DefaultProcessModel(A, B, Q, x, P0);
+        MeasurementModel mm = new DefaultMeasurementModel(H, R);
+        filter = new KalmanFilter(pm, mm);
+    }
 
-    void predict (RealVector u) //RealVector u = new ArrayRealVector(new double[][]{{ax}, {ay}}); u=[ax, ay]
+    void predict(RealVector u) //RealVector u = new ArrayRealVector(new double[][]{{ax}, {ay}}); u=[ax, ay]
     {
         filter.predict(u);
     }
 
-    void correct (RealVector z)
-    {
+    void correct(RealVector z) {
         filter.correct(z);
     }
 
-    RealVector getStateEstimationVector()
-    {
+    RealVector getStateEstimationVector() {
         return filter.getStateEstimationVector();
     }
 }

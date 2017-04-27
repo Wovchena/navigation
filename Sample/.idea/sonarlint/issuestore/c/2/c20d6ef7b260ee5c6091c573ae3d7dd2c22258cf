@@ -1,80 +1,24 @@
 
-[squid:S1161":Add the "@Override" annotation above this method signature(ÆÚìøÿÿÿÿ8Â×Áá¸+
-{squid:S00116"`Rename this field "NonSwipeableViewPager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ¥šœÿÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"WMake singlePoint a static final constant or non-public and provide accessors if needed.(™Ó¥§úÿÿÿÿ8‚Û¯â¸+
-Bsquid:S1170"!Make this final field static too.(è–¹°şÿÿÿÿ8Õ¤á¸+
-Xsquid:CallToDeprecatedMethod"3Remove this use of "TabListener"; it is deprecated.(»Ü8
-Ysquid:CallToDeprecatedMethod".Remove this use of "addTab"; it is deprecated.(ä½¨óûÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ú£Î
-Vsquid:CallToDeprecatedMethod"+Remove this use of "Tab"; it is deprecated.(À¬ı‘ûÿÿÿÿ
-psquid:UselessImportCheck"IRemove this unused import 'com.customlbs.library.callbacks.ZoneCallback'.(ı±ÃŠşÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"UMake twoPoints a static final constant or non-public and provide accessors if needed.(í«‚–úÿÿÿÿ8ï¤³â¸+
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(áíüÈùÿÿÿÿ
-Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(æ’ü
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œç–øÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿óşÖÿÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-_squid:CallToDeprecatedMethod"9Remove this use of "setNavigationMode"; it is deprecated.(¾İ¼
-Bsquid:S1125"(Remove the literal "true" boolean value.(’Æ°­ıÿÿÿÿ
-Lsquid:S1213"8Move this variable to comply with Java Code Conventions.(İÁ$
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•ÈÒ¥ûÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(öÀ·ÿÿÿÿÿ
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œƒƒ©ùÿÿÿÿ
-’"squid:ClassVariableVisibilityCheck"`Make numberOfSettedPoints a static final constant or non-public and provide accessors if needed.(·²¦8÷Û²á¸+
-qsquid:S00116"TRename this field "POINTMODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‚¼¯8¦íá¸+
-Tsquid:UselessImportCheck"3Remove this unused import 'android.view.DragEvent'.(÷ŒÚS
-Vsquid:CallToDeprecatedMethod"+Remove this use of "Tab"; it is deprecated.(øÛô’ùÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ã†’®üÿÿÿÿ
-4squid:S1659"Declare "y" on a separate line.(äÛÁ”
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ƒêï
-rsquid:S1188"]Reduce this anonymous class number of lines from 103 to at most 20, or make it a named class.(éê½Š
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Ş©Ú§
-^squid:UselessImportCheck"7Remove this unused import 'android.widget.ImageButton'.(‚ÏÉõÿÿÿÿÿ
-Šsquid:S1151"iReduce this switch case number of lines from 7 to at most 5, for example by extracting code into methods.(×¬¢ûÿÿÿÿ8Ì€»â¸+
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(Æ´–ï
-Csquid:S1125")Remove the literal "false" boolean value.(’Æ°­ıÿÿÿÿ
-Nsquid:S1135"2Complete the task associated to this TODO comment.(Ú—ïƒ8¿ˆ„ˆ¹+
-Osquid:S1161":Add the "@Override" annotation above this method signature(¸ıéü
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿå£ 
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Â·ò 
-Gsquid:S1135"2Complete the task associated to this TODO comment.(ğÌéş
-Vsquid:CallToDeprecatedMethod"0Remove this use of "getZones"; it is deprecated.(ØÓ´‚
-Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(ó½Æ¶üÿÿÿÿ
-Ysquid:CallToDeprecatedMethod".Remove this use of "newTab"; it is deprecated.(ä½¨óûÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
-Tsquid:S1161":Add the "@Override" annotation above this method signature(ìş–Èúÿÿÿÿ
-Isquid:S1066"/Merge this if statement with the enclosing one.(Ïóæøÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¸•´£şÿÿÿÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ
-usquid:UselessImportCheck"SRemove this unused import 'com.customlbs.library.callbacks.OnlineBuildingCallback'.(‚Ù„¹
-ksquid:UselessImportCheck"DRemove this unused import 'android.graphics.drawable.ColorDrawable'.(ÖŸÂ«øÿÿÿÿ
-“"squid:ClassVariableVisibilityCheck"[Make createdOverlays a static final constant or non-public and provide accessors if needed.(´åµ–øÿÿÿÿ8ëêëá¸+
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Áâšşÿÿÿÿ
-Nsquid:S1135"2Complete the task associated to this TODO comment.(£®ÓÑ8 ñ¡á¸+
-bsquid:CallToDeprecatedMethod"<Remove this use of "NAVIGATION_MODE_TABS"; it is deprecated.(¾İ¼
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™ª¢„ıÿÿÿÿ
-Qsquid:CallToDeprecatedMethod"+Remove this use of "Tab"; it is deprecated.(¦±“­
-[squid:CallToDeprecatedMethod"0Remove this use of "getZones"; it is deprecated.(ä¯ÌĞùÿÿÿÿ
-Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-=squid:S1170"!Make this final field static too.(ò‚¼¯8æ©á¸+
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(öê±áúÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(äè¸Ş
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œƒƒ©ùÿÿÿÿ8¹»î‡»+
 Lsquid:S1135"2Complete the task associated to this TODO comment.(“Óÿ‚ûÿÿÿÿ
-hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(º¶–·ÿÿÿÿÿ8ĞæÜâ¸+
-‰"squid:ClassVariableVisibilityCheck"VMake mesureMode a static final constant or non-public and provide accessors if needed.(õ®á½8Åüá¸+
-dsquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡İï¶ıÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ãµÇöùÿÿÿÿ
-lsquid:CallToDeprecatedMethod"ARemove this use of "setSelectedNavigationItem"; it is deprecated.(»‚¦Çıÿÿÿÿ
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ò˜Ö¤
-Tsquid:CallToDeprecatedMethod".Remove this use of "newTab"; it is deprecated.(Ä–æ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø—×
-osquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÆ³¬üÿÿÿÿ
-hsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(ÚĞâÌıÿÿÿÿ
-jsquid:S1871"IThis case's code block is the same as the block for the case on line 129.(Àò“ûÿÿÿÿ8Úªƒˆ¹+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø8¹»î‡»+
+Bsquid:S1170"!Make this final field static too.(è–¹°şÿÿÿÿ8Õ¤á¸+
 6squid:S1700"Rename field "pagedActivity"(¤ü†Çıÿÿÿÿ
-Tsquid:CallToDeprecatedMethod".Remove this use of "addTab"; it is deprecated.(Ä–æ
-usquid:S00116"SRename this field "LINEMODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è–¹°şÿÿÿÿ8Õ¤á¸+
-Šsquid:S1151"iReduce this switch case number of lines from 7 to at most 5, for example by extracting code into methods.(áŒ·Íúÿÿÿÿ8ÔĞ»â¸+
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÔØ„Å
+osquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÆ³¬üÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ
+Psquid:S1066"/Merge this if statement with the enclosing one.(Ïóæøÿÿÿÿ8¹»î‡»+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(Â·ò 8‹ÌÕ‡»+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ù¤š8¹»î‡»+
+=squid:S1170"!Make this final field static too.(ò‚¼¯8æ©á¸+
+Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+4squid:S1659"Declare "y" on a separate line.(äÛÁ”
+Nsquid:S1135"2Complete the task associated to this TODO comment.(£®ÓÑ8 ñ¡á¸+
+Bsquid:S1125"(Remove the literal "true" boolean value.(’Æ°­ıÿÿÿÿ
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ğÌéş8¹»î‡»+
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
+Csquid:S1125")Remove the literal "false" boolean value.(’Æ°­ıÿÿÿÿ
+hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(º¶–·ÿÿÿÿÿ8ĞæÜâ¸+
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(æ’ü8¹»î‡»+
+dsquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡İï¶ıÿÿÿÿ
+Gsquid:S1135"2Complete the task associated to this TODO comment.(Ş©Ú§
+Nsquid:S1135"2Complete the task associated to this TODO comment.(‡šœ“8‡€ô‡»+

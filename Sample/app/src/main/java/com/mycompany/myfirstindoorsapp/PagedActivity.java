@@ -3,17 +3,20 @@ package com.mycompany.myfirstindoorsapp;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
+import android.hardware.SensorManager;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -59,6 +62,8 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.apache.commons.math3.linear.ArrayRealVector;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,7 +89,9 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     private boolean connected = false;
     IndoorsSurfaceFactory.Builder surfaceBuilder;
     private boolean firstCall = false; // определение готовности идор сервиса (был ли сделан вызов updatePosition)
-
+    Kalman kalman=null;
+    Accel accel=null;
+    Data data=null;
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
@@ -128,9 +135,23 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 return true;
             case R.id.menu_startMesurement:
                 //TODO: begin mesurement
+
+                kalman=new Kalman();
+                accel.start(mesureMode);
+                if ((mesureMode==POINTMODE)&&(singlePoint!=null)) {
+                    data = new Data(singlePoint);
+                }
+                if ((mesureMode==LINEMODE)&&(twoPoints!=null)) {
+                    data = new Data(twoPoints[0], twoPoints[1]);
+                }
+                if((twoPoints!=null)&&(singlePoint!=null))
+                {
+                    Toast.makeText(this, "singlePoint==null==twoPoints", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             case R.id.menu_stopMesurement:
-                //TODO stop mesurement
+                kalman=null;
+                accel.stop();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -515,6 +536,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     protected void onCreate(Bundle savedInstanceState) {
         pagedActivity=this;
         super.onCreate(savedInstanceState);
+        accel=new Accel(this, (SensorManager)getSystemService(Context.SENSOR_SERVICE));
         createdOverlays=new SurfaceOverlay[2];
 
 
@@ -645,6 +667,16 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 			    "User is located at " + geoCoordinate.getLatitude() + ","
 			    + geoCoordinate.getLongitude(), Toast.LENGTH_SHORT).show();
 		}*/
+        if (kalman!=null)
+        {
+            long time = SystemClock.uptimeMillis();
+            double[] coord=new double [2];
+            coord[0]=(double)(userPosition.x);
+            coord[1]=(double)userPosition.y;
+            kalman.correct(new ArrayRealVector());
+            data.addToIndoors(time, userPosition);
+            //TODO contunue from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        }
     }
 
     public void loadingBuilding(LoadingBuildingStatus loadingBuildingStatus) {
@@ -796,5 +828,10 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 
     @Override
     public void onBackPressed() {
+    }
+
+    void onAccelChanged (float[] accelData)
+    {
+        //TODO store accelData
     }
 }

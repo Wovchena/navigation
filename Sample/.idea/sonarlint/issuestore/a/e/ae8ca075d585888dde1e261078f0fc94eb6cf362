@@ -1,7 +1,5 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µ£‚ôúÿÿÿÿ8ýˆ”þ¹+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(×Û·Ð8óÞÒþ¹+
-Ssquid:S1135"2Complete the task associated to this TODO comment.(•þ“°øÿÿÿÿ8™ Ùþ¹+
-wsquid:S00116"ZRename this field "OrientationData" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÐÖ –8’ÓÂþ¹+
-fsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8‚êøþ¹+
 Ssquid:S1135"2Complete the task associated to this TODO comment.(Á÷¿Ãùÿÿÿÿ8ÝÚþ¹+
+fsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8‚êøþ¹+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(•þ“°øÿÿÿÿ8™ Ùþ¹+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(×Û·Ð8óÞÒþ¹+
