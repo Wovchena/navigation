@@ -23,7 +23,7 @@ public class Kalman {
     KalmanFilter filter;
 
 
-    void Kalman(double accelNoise, double measurementNoise, RealVector x) {
+    Kalman(double accelNoise, double measurementNoise, RealVector x) {
         // x = [ 0 0 ] initial coordinates. from example:
         //RealVector x = new ArrayRealVector(new double[] { 0, 0 });
         this.accelNoise = accelNoise;

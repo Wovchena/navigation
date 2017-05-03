@@ -1,24 +1,23 @@
 
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œƒƒ©ùÿÿÿÿ8¹»î‡»+
-Lsquid:S1135"2Complete the task associated to this TODO comment.(“Óÿ‚ûÿÿÿÿ
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø8¹»î‡»+
-Bsquid:S1170"!Make this final field static too.(è–¹°şÿÿÿÿ8Õ¤á¸+
-6squid:S1700"Rename field "pagedActivity"(¤ü†Çıÿÿÿÿ
-osquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÆ³¬üÿÿÿÿ
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ
-Psquid:S1066"/Merge this if statement with the enclosing one.(Ïóæøÿÿÿÿ8¹»î‡»+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(Â·ò 8‹ÌÕ‡»+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ù¤š8¹»î‡»+
+Psquid:S1066"/Merge this if statement with the enclosing one.(Ïóæøÿÿÿÿ8ëøİğ¼+
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œƒƒ©ùÿÿÿÿ8ëøİğ¼+
+hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(º¶–·ÿÿÿÿÿ8ëøİğ¼+
+=squid:S1700"Rename field "pagedActivity"(¤ü†Çıÿÿÿÿ8ÑËğ¼+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ğÌéş8ÑËğ¼+
+vsquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÆ³¬üÿÿÿÿ8ÑËğ¼+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø8ëøİğ¼+
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ8ëøİğ¼+
+ksquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡İï¶ıÿÿÿÿ8ëøİğ¼+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(“Óÿ‚ûÿÿÿÿ8ëøİğ¼+
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(æ’ü8ëøİğ¼+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(Â·ò 8ëøİğ¼+
+;squid:S1659"Declare "y" on a separate line.(äÛÁ”8ëøİğ¼+
+Msquid:S1135"2Complete the task associated to this TODO comment.(­°à(8Ğµ½ğ¼+
 =squid:S1170"!Make this final field static too.(ò‚¼¯8æ©á¸+
-Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-4squid:S1659"Declare "y" on a separate line.(äÛÁ”
-Nsquid:S1135"2Complete the task associated to this TODO comment.(£®ÓÑ8 ñ¡á¸+
-Bsquid:S1125"(Remove the literal "true" boolean value.(’Æ°­ıÿÿÿÿ
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ğÌéş8¹»î‡»+
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
-Csquid:S1125")Remove the literal "false" boolean value.(’Æ°­ıÿÿÿÿ
-hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(º¶–·ÿÿÿÿÿ8ĞæÜâ¸+
-Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(æ’ü8¹»î‡»+
-dsquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡İï¶ıÿÿÿÿ
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Ş©Ú§
-Nsquid:S1135"2Complete the task associated to this TODO comment.(‡šœ“8‡€ô‡»+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(£ª«—úÿÿÿÿ8ÑËğ¼+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(Ş©Ú§8ëøİğ¼+
+Bsquid:S1170"!Make this final field static too.(è–¹°şÿÿÿÿ8ÑËğ¼+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­8ëøİğ¼+
+Nsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8ëøİğ¼+
+Isquid:S1125"(Remove the literal "true" boolean value.(’Æ°­ıÿÿÿÿ8ëøİğ¼+
+Jsquid:S1125")Remove the literal "false" boolean value.(’Æ°­ıÿÿÿÿ8ëøİğ¼+

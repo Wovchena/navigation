@@ -1,5 +1,6 @@
 
-Ssquid:S1135"2Complete the task associated to this TODO comment.(Á÷¿Ãùÿÿÿÿ8İÚş¹+
 fsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8‚êøş¹+
-Ssquid:S1135"2Complete the task associated to this TODO comment.(•ş“°øÿÿÿÿ8™ Ùş¹+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(×Û·Ğ8óŞÒş¹+
+ysquid:S1450"XRemove the "accelData" field and declare it as a local variable in the relevant methods.(åºÜÃùÿÿÿÿ8ÈÑºî¼+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ÿæ¬É8¬ìºî¼+
+ssquid:S1450"WRemove the "aInBasic" field and declare it as a local variable in the relevant methods.(İ•Ïâ8İÑóî¼+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(Çîáïúÿÿÿÿ8 ¬ğ¼+

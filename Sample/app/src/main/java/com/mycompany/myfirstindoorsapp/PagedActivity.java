@@ -63,6 +63,7 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.apache.commons.math3.linear.ArrayRealVector;
+import org.apache.commons.math3.linear.RealVector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +93,12 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     Kalman kalman=null;
     Accel accel=null;
     Data data=null;
+    int FLOORLVL=0;
+    float rotation=0; //Real world orientation of this building in degrees. 0 is north.
+    Building building=null;
+    double accelNoise=0.1; //TODO info after tries
+    double measurementNoise=10; //TODO info after tries
+    Coordinate currentPosition;
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
@@ -134,15 +141,24 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 twoPoints[1]=null;
                 return true;
             case R.id.menu_startMesurement:
-                //TODO: begin mesurement
+                // begin mesurement
 
-                kalman=new Kalman();
+                double[] coord=new double[2];
+                coord[0]=currentPosition.x;
+                coord[1]=currentPosition.y;
+                RealVector x = new ArrayRealVector(coord);
+                kalman=new Kalman (accelNoise, measurementNoise, x);
                 accel.start(mesureMode);
                 if ((mesureMode==POINTMODE)&&(singlePoint!=null)) {
                     data = new Data(singlePoint);
                 }
                 if ((mesureMode==LINEMODE)&&(twoPoints!=null)) {
-                    data = new Data(twoPoints[0], twoPoints[1]);
+                    data = new Data(twoPoints[0], twoPoints[1], SystemClock.uptimeMillis());
+                }
+                if((twoPoints!=null)&&(singlePoint!=null))
+                {
+                    Toast.makeText(this, "singlePoint!=!=!null!=!=!twoPoints", Toast.LENGTH_SHORT)
+                            .show();
                 }
                 if((twoPoints!=null)&&(singlePoint!=null))
                 {
@@ -150,8 +166,14 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 }
                 return true;
             case R.id.menu_stopMesurement:
-                kalman=null;
+                double[] standartDeviations=data.calc(SystemClock.uptimeMillis());
                 accel.stop();
+                kalman=null;
+
+
+                Toast.makeText(this, "Deviation for indoors="+standartDeviations[0]+"; and for " +
+                    "Kalman="+standartDeviations[1], Toast.LENGTH_LONG).show();
+                data=null;
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -536,7 +558,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     protected void onCreate(Bundle savedInstanceState) {
         pagedActivity=this;
         super.onCreate(savedInstanceState);
-        accel=new Accel(this, (SensorManager)getSystemService(Context.SENSOR_SERVICE));
+        accel=new Accel(this, (SensorManager)getSystemService(Context.SENSOR_SERVICE), rotation);
         createdOverlays=new SurfaceOverlay[2];
 
 
@@ -635,6 +657,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         // if first try, itialize list of zones
         if (connected==true && firstCall == false) // if first try, itialize list of zones
         {
+            rotation=building.getRotation();
             firstCall = true;
 
             List<Zone> zoneList = indoorsSurfaceFragment.getZones();
@@ -649,10 +672,9 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 fragment.addItem(pagedActivity, indoorsSurfaceFragment, z.getName(), center);
             }
 
-
-
-
         }
+
+        currentPosition=userPosition;
        /* Coordinate c = indoorsSurfaceFragment.getCurrentUserPosition();
         if (c != null) {
             Toast.makeText(
@@ -673,9 +695,12 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
             double[] coord=new double [2];
             coord[0]=(double)(userPosition.x);
             coord[1]=(double)userPosition.y;
-            kalman.correct(new ArrayRealVector());
+            kalman.correct(new ArrayRealVector(coord));
+            double[] estimatedState;
+            estimatedState=kalman.getStateEstimationVector().toArray();
+            data.addToFilter(time, new Coordinate((int)estimatedState[0], (int)estimatedState[1], FLOORLVL));
+
             data.addToIndoors(time, userPosition);
-            //TODO contunue from here !!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
     }
 
@@ -689,6 +714,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     public void buildingLoaded(Building building) {
         // Fake a 100% progress to your UI when you receive info that the download is finished.
         showDownloadProgressToUser(100);
+        this.building=building;
         // indoo.rs SDK successfully loaded the building you requested and
         // calculates a position now
         /*Toast.makeText(
@@ -830,8 +856,15 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     public void onBackPressed() {
     }
 
-    void onAccelChanged (float[] accelData)
+    void onAccelChanged (double[] accelData)
+            //store accelData
     {
-        //TODO store accelData
+        if (kalman!=null) {
+            long time = SystemClock.uptimeMillis();
+            kalman.predict(new ArrayRealVector(accelData));
+            double[] estimatedState;
+            estimatedState=kalman.getStateEstimationVector().toArray();
+            data.addToFilter(time, new Coordinate((int)estimatedState[0], (int)estimatedState[1], FLOORLVL));
+        }
     }
 }
