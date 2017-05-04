@@ -4,6 +4,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.SystemClock;
 import android.util.Log;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
@@ -24,6 +25,9 @@ public class Accel implements SensorEventListener {
     private double[] doubleAccelData=new double[3];
     private double rotation;
     private double[] aInReal=new double[2];
+    double [] meanAInReal=new double[2];
+    long lastTimeSend = 0;
+    int counter = 0;
 
     public Accel(PagedActivity pa, SensorManager sm, float rotationInDeg)
     {
@@ -48,6 +52,7 @@ public class Accel implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
+        long currentT= SystemClock.uptimeMillis();
         final int type = sensorEvent.sensor.getType();
 
         if (type == Sensor.TYPE_LINEAR_ACCELERATION) {
@@ -77,9 +82,24 @@ public class Accel implements SensorEventListener {
             aInReal[0]=aInReal[0]*1000;
             aInReal[1]=aInBasic[0]*Math.sin(rotation)+aInBasic[1]*Math.cos(rotation);
             aInReal[1]=aInReal[1]*1000;
+            counter++;
+            meanAInReal[0]+=aInReal[0];
+            meanAInReal[1]+=aInReal[1];
             //TODO is rotation right?
             //pass only x and y in accelData to onAccelCahnged()
-            pa.onAccelChanged(aInReal);
+            if (currentT-lastTimeSend>=2) {//passed 2 millisec
+                meanAInReal[0]=meanAInReal[0]/counter;
+                meanAInReal[1]=meanAInReal[1]/counter;
+                if ((meanAInReal[0]>2)||(meanAInReal[1]>2)||(meanAInReal[0]<-2)
+                        ||meanAInReal[1]<-2) {
+                    Log.d("accelaccels", "" + meanAInReal[0] + " | " + meanAInReal[1]);
+                }
+                pa.onAccelChanged(meanAInReal);
+                lastTimeSend=currentT;
+                counter=0;
+                meanAInReal[0]=0;
+                meanAInReal[1]=0;
+            }
         }
 
         if (type == Sensor.TYPE_MAGNETIC_FIELD) {

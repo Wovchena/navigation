@@ -7,15 +7,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.drawable.ColorDrawable;
 import android.hardware.SensorManager;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -27,15 +23,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.Surface;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.customlbs.library.IndoorsException;
@@ -43,20 +34,13 @@ import com.customlbs.library.IndoorsFactory;
 import com.customlbs.library.IndoorsLocationListener;
 import com.customlbs.library.LocalizationParameters;
 import com.customlbs.library.callbacks.IndoorsServiceCallback;
-import com.customlbs.library.callbacks.LoadingBuildingCallback;
 import com.customlbs.library.callbacks.LoadingBuildingStatus;
-import com.customlbs.library.callbacks.OnlineBuildingCallback;
-import com.customlbs.library.callbacks.RoutingCallback;
-import com.customlbs.library.callbacks.ZoneCallback;
 import com.customlbs.library.model.Building;
 import com.customlbs.library.model.Zone;
 import com.customlbs.shared.Coordinate;
-import com.customlbs.surface.library.DefaultSurfacePainterConfiguration;
 import com.customlbs.surface.library.IndoorsSurface;
 import com.customlbs.surface.library.IndoorsSurfaceFactory;
 import com.customlbs.surface.library.IndoorsSurfaceFragment;
-import com.customlbs.surface.library.SurfacePainterConfiguration;
-import com.customlbs.surface.library.ViewMode;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -156,7 +140,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                         Toast.makeText(this, "new Data (singlePoint)", Toast.LENGTH_SHORT).show();
                     }
                     if ((mesureMode == LINEMODE) && (twoPoints[0] != null) && (twoPoints[1] != null)) {
-                        data = new Data(twoPoints[0], twoPoints[1], SystemClock.uptimeMillis() * 1000);
+                        data = new Data(twoPoints[0], twoPoints[1], SystemClock.uptimeMillis());
                         Toast.makeText(this, "new Data (twoPoints)", Toast.LENGTH_SHORT).show();
                     }
                     if ((twoPoints[0] != null) && (twoPoints[1] != null) && (singlePoint != null)) {
@@ -170,7 +154,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 }
                 return true;
             case R.id.menu_stopMesurement:
-                double[] standartDeviations = data.calc(SystemClock.uptimeMillis() * 1000);
+                double[] standartDeviations = data.calc(SystemClock.uptimeMillis());
                 accel.stop();
                 kalman = null;
                 fragment.addItem(pagedActivity, indoorsSurfaceFragment, "Deviation for indoors=" +
@@ -337,7 +321,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                         final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                         indoorsSurfaceFragment.addOverlay(overlay);
                         indoorsSurfaceFragment.updateSurface();
-                        View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
+                        View view = getLayoutInflater().inflate(R.layout.dialog_create_point, null);
                         AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                         builder.setTitle("Set one point")
                                 .setMessage(mapPoint.toString())
@@ -368,7 +352,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                             final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                             indoorsSurfaceFragment.addOverlay(overlay);
                             indoorsSurfaceFragment.updateSurface();
-                            View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
+                            View view = getLayoutInflater().inflate(R.layout.dialog_create_point, null);
                             AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                             builder.setTitle("Set first point")
                                     .setMessage(mapPoint.toString())
@@ -396,7 +380,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                             final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                             indoorsSurfaceFragment.addOverlay(overlay);
                             indoorsSurfaceFragment.updateSurface();
-                            View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
+                            View view = getLayoutInflater().inflate(R.layout.dialog_create_point, null);
                             AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                             builder.setTitle("Set second point")
                                     .setMessage(mapPoint.toString())
@@ -550,9 +534,6 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
             String value = extras.getString("key");
             if (value.equals("Disc")) {
                 NonSwipeableViewPager.setCurrentItem(1);
-                Toast.makeText(
-                        this,
-                        "Shop list will appear soon", Toast.LENGTH_SHORT).show();
             }
             Log.d("extras", value);
             //The key argument here must match that used in the other activity
@@ -577,7 +558,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         currentPosition = userPosition;
 
         if (kalman != null) {
-            long time = SystemClock.uptimeMillis() * 1000;
+            long time = SystemClock.uptimeMillis();
             double[] coord = new double[2];
             coord[0] = (double) userPosition.x;
             coord[1] = (double) userPosition.y;
@@ -699,7 +680,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     //store accelData
     {
         if (kalman != null) {
-            long time = SystemClock.uptimeMillis() * 1000;
+            long time = SystemClock.uptimeMillis();
             kalman.predict(new ArrayRealVector(accelData));
             double[] estimatedState;
             estimatedState = kalman.getStateEstimationVector().toArray();

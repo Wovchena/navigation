@@ -14,10 +14,11 @@ import org.apache.commons.math3.linear.RealVector;
  */
 
 public class Kalman {
-    long dt=20; // time of new accel (20 micros)
+    long dt=2; // time of new accel (2 millisec)
     double accelNoise;
     double measurementNoise;
     KalmanFilter filter;
+    private final Object lock = new Object();
 
 
     Kalman(double accelNoise, double measurementNoise, RealVector x) {
@@ -61,13 +62,13 @@ public class Kalman {
         // это матожидание квадрата разностей
         //Q=accelNoise*B*BT
         RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise * accelNoise);
-        // P0 = [ 999 0 ]
-//      [ 0 999 ]
+        // P0 = [ 10 0 ]
+//      [ 0 10 ]
         //TODO changed dim of P0
-        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{999999999,0,0,0},
-                {0, 999999999, 0, 0},
-                {0, 0, 999999999, 0},
-                {0, 0, 0, 999999999}});
+        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{10,0,0,0},
+                {0, 10, 0, 0},
+                {0, 0, 10, 0},
+                {0, 0, 0, 10}});
 
         // R = [ measurementNoise^2 ]
         RealMatrix R = new Array2DRowRealMatrix(new double[][]{{Math.pow(measurementNoise, 2),
@@ -80,16 +81,25 @@ public class Kalman {
         filter = new KalmanFilter(pm, mm);
     }
 
-    void predict(RealVector u) //RealVector u = new ArrayRealVector(new double[][]{{ax}, {ay}}); u=[ax, ay]
+    void predict(RealVector u) //RealVector u = new ArrayRealVector(new double[][]{{ax}, {ay}});
+    // u=[ax, ay]
     {
-        filter.predict(u);
+        synchronized (lock) {
+            filter.predict(u);
+        }
     }
 
     void correct(RealVector z) {
-        filter.correct(z);
+
+        synchronized (lock) {
+            filter.correct(z);
+        }
     }
 
     RealVector getStateEstimationVector() {
-        return filter.getStateEstimationVector();
+
+        synchronized (lock) {
+            return filter.getStateEstimationVector();
+        }
     }
 }
