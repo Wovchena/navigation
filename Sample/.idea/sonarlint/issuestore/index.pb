@@ -13,3 +13,11 @@ m
 =app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java,2/d/2dc323f483f985ee86c64b4263e6e76becbd519b
 q
 Aapp/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java,3/2/32dfc5bf1061fa5b8debd6a1b2d9ae3f214388e1
+v
+Fapp/src/main/java/com/mycompany/myfirstindoorsapp/DiscountsOfShop.java,6/1/61da90c5dc4713510611ec0b2bd6068fe2f52b90
+Å
+Qapp/src/main/java/com/mycompany/myfirstindoorsapp/DemoCollectionPagerAdapter.java,8/4/84dee017cc83f82e7fc28cd106f36d8aff41a8a7
+y
+Iapp/src/main/java/com/mycompany/myfirstindoorsapp/DemoObjectFragment.java,d/e/de52ad97e8ec8d5241edbe9dfd0117401cdf08d5
+|
+Lapp/src/main/java/com/mycompany/myfirstindoorsapp/NonSwipeableViewPager.java,2/3/233a8738df2c85b4ee18af2a7948ad525c4a00e3

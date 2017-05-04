@@ -32,7 +32,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state />
+        </projects_view>
       </state>
     </system>
   </component>
@@ -44,30 +46,39 @@
       <file leaf-file-name="PagedActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+            <state relative-caret-position="185">
+              <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
               <folding>
-                <element signature="e#13206#13790#0" expanded="true" />
-                <element signature="e#13789#13790#0" expanded="true" />
-                <element signature="e#14181#21305#0" expanded="true" />
-                <element signature="e#15218#15626#0" expanded="true" />
-                <element signature="e#15625#15626#0" expanded="true" />
-                <element signature="e#15685#16156#0" expanded="true" />
-                <element signature="e#16155#16156#0" expanded="true" />
-                <element signature="e#17674#18102#0" expanded="true" />
-                <element signature="e#18101#18102#0" expanded="true" />
-                <element signature="e#18165#18661#0" expanded="true" />
-                <element signature="e#18660#18661#0" expanded="true" />
-                <element signature="e#19834#20262#0" expanded="true" />
-                <element signature="e#20261#20262#0" expanded="true" />
-                <element signature="e#20325#20821#0" expanded="true" />
-                <element signature="e#20820#20821#0" expanded="true" />
-                <element signature="e#21304#21305#0" expanded="true" />
-                <element signature="e#27528#27900#0" expanded="true" />
-                <element signature="e#27899#27900#0" expanded="true" />
-                <element signature="e#34865#35007#0" expanded="true" />
-                <element signature="e#35006#35007#0" expanded="true" />
+                <element signature="e#14070#20368#0" expanded="true" />
+                <element signature="e#14984#15392#0" expanded="true" />
+                <element signature="e#15391#15392#0" expanded="true" />
+                <element signature="e#15451#15788#0" expanded="true" />
+                <element signature="e#15787#15788#0" expanded="true" />
+                <element signature="e#17146#17574#0" expanded="true" />
+                <element signature="e#17573#17574#0" expanded="true" />
+                <element signature="e#17637#17995#0" expanded="true" />
+                <element signature="e#17994#17995#0" expanded="true" />
+                <element signature="e#19041#19469#0" expanded="true" />
+                <element signature="e#19468#19469#0" expanded="true" />
+                <element signature="e#19532#19890#0" expanded="true" />
+                <element signature="e#19889#19890#0" expanded="true" />
+                <element signature="e#20367#20368#0" expanded="true" />
+                <element signature="e#24307#24679#0" expanded="true" />
+                <element signature="e#24678#24679#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entry_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/entry_list.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,31 +86,11 @@
       <file leaf-file-name="Accel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+            <state relative-caret-position="-127">
+              <caret line="55" column="33" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Array2DRowRealMatrix.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/app/libs/commons-math3-3.6.1.jar!/org/apache/commons/math3/linear/Array2DRowRealMatrix.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Const.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,20 +98,8 @@
       <file leaf-file-name="Data.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-23/android.jar!/java/util/Vector.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
-              <caret line="179" column="28" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
+            <state relative-caret-position="738">
+              <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -136,11 +115,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kalman.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DemoObjectFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DemoObjectFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="61" column="75" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_collection_object.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_collection_object.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kalman.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="328">
+              <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,23 +153,14 @@
       <file leaf-file-name="SurfaceOverlay.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="810">
+              <caret line="56" column="2" selection-start-line="56" selection-start-column="0" selection-end-line="59" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#605#606#0" expanded="false" />
+                <element signature="e#643#644#0" expanded="false" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="options_menu.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1864,10 +1857,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Printer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DemoCollectionPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_discounts_of_shop.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_collection_object.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/shop_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/entry_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DemoObjectFragment.java" />
       </list>
     </option>
   </component>
@@ -1918,17 +1918,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Sample" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1962,16 +1991,20 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../problem with support.v7/Sample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyAcselerometerTest" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="device.picker.selection" value="highscreen" />
     <property name="SONARLINT_ANALYSIS_RESULTS_SCOPE" value="VCS changed files" />
+    <property name="SearchEverywhereHistoryKey" value="discountList&#9;PSI&#9;JAVA://com.mycompany.myfirstindoorsapp.DemoObjectFragment#discountList&#10;shop_l&#9;PSI&#9;JAVA://com.mycompany.myfirstindoorsapp.R.layout#shop_list&#10;ClickonDiscList&#9;PSI&#9;JAVA://com.mycompany.myfirstindoorsapp.PagedActivity#ClickonDiscList&#10;twoPoints&#9;PSI&#9;JAVA://com.mycompany.myfirstindoorsapp.PagedActivity#twoPoints" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -2306,13 +2339,14 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023096664" sideWeight="0.58943784" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.50913244" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2648402" sideWeight="0.5868263" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5329341" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53424656" sideWeight="0.49272883" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2780154" sideWeight="0.4105622" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.497006" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.497006" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.49016252" order="10" side_tool="false" content_ui="tabs" />
@@ -2320,7 +2354,8 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22668947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.49543378" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.47647563" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.49086758" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2329,8 +2364,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2780154" sideWeight="0.4105622" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.47647563" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2346,112 +2379,128 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="79" column="67" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2124">
-          <caret line="179" column="25" selection-start-line="179" selection-start-column="22" selection-end-line="179" selection-end-column="25" />
-          <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+        <state relative-caret-position="1098">
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
           <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <folding>
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <folding>
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2478,189 +2527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-          <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-          <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-          <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2678,19 +2545,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
@@ -2698,26 +2568,22 @@
         <state relative-caret-position="1098">
           <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
           <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2744,9 +2610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2764,19 +2628,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
@@ -2784,26 +2651,22 @@
         <state relative-caret-position="1134">
           <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
           <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2812,19 +2675,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
@@ -2832,26 +2698,22 @@
         <state relative-caret-position="4788">
           <caret line="325" column="61" selection-start-line="325" selection-start-column="61" selection-end-line="325" selection-end-column="61" />
           <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2860,62 +2722,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/options_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-23/android.jar!/java/util/Vector.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2034">
           <caret line="179" column="28" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2930,24 +2769,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_paged.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_create_discount.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DemoCollectionPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#678#679#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Discounts.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/NonSwipeableViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2149#2150#0" expanded="false" />
+            <element signature="e#2217#2218#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/SurfaceOverlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="56" column="2" selection-start-line="56" selection-start-column="0" selection-end-line="59" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/TimeAndPos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Data.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Accel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        <state relative-caret-position="-127">
+          <caret line="55" column="33" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2956,40 +2876,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/PagedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+        <state relative-caret-position="185">
+          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
           <folding>
-            <element signature="e#13206#13790#0" expanded="true" />
-            <element signature="e#13789#13790#0" expanded="true" />
-            <element signature="e#14181#21305#0" expanded="true" />
-            <element signature="e#15218#15626#0" expanded="true" />
-            <element signature="e#15625#15626#0" expanded="true" />
-            <element signature="e#15685#16156#0" expanded="true" />
-            <element signature="e#16155#16156#0" expanded="true" />
-            <element signature="e#17674#18102#0" expanded="true" />
-            <element signature="e#18101#18102#0" expanded="true" />
-            <element signature="e#18165#18661#0" expanded="true" />
-            <element signature="e#18660#18661#0" expanded="true" />
-            <element signature="e#19834#20262#0" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20325#20821#0" expanded="true" />
-            <element signature="e#20820#20821#0" expanded="true" />
-            <element signature="e#21304#21305#0" expanded="true" />
-            <element signature="e#27528#27900#0" expanded="true" />
-            <element signature="e#27899#27900#0" expanded="true" />
-            <element signature="e#34865#35007#0" expanded="true" />
-            <element signature="e#35006#35007#0" expanded="true" />
+            <element signature="e#14070#20368#0" expanded="true" />
+            <element signature="e#14984#15392#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15451#15788#0" expanded="true" />
+            <element signature="e#15787#15788#0" expanded="true" />
+            <element signature="e#17146#17574#0" expanded="true" />
+            <element signature="e#17573#17574#0" expanded="true" />
+            <element signature="e#17637#17995#0" expanded="true" />
+            <element signature="e#17994#17995#0" expanded="true" />
+            <element signature="e#19041#19469#0" expanded="true" />
+            <element signature="e#19468#19469#0" expanded="true" />
+            <element signature="e#19532#19890#0" expanded="true" />
+            <element signature="e#19889#19890#0" expanded="true" />
+            <element signature="e#20367#20368#0" expanded="true" />
+            <element signature="e#24307#24679#0" expanded="true" />
+            <element signature="e#24678#24679#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/Kalman.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_discounts_of_shop.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DiscountsOfShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/mycompany/myfirstindoorsapp/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1868" column="5" selection-start-line="1868" selection-start-column="5" selection-end-line="1868" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_collection_object.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_of_shops.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/entry_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mycompany/myfirstindoorsapp/DemoObjectFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="61" column="75" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

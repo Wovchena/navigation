@@ -31,8 +31,8 @@ public class SurfaceOverlay implements IndoorsSurfaceOverlay {
 
     @Override
     public void paint(Canvas canvas, SurfaceState surfaceState) {
-        Log.i("coord", "mapPoint.x="+mapPoint.x);
-        Log.i("coord", "mapPoint.y="+mapPoint.y);
+/*        Log.i("coord", "mapPoint.x="+mapPoint.x);
+        Log.i("coord", "mapPoint.y="+mapPoint.y);*/
 
         int mPx=mapPoint.x;
         int mPy=mapPoint.y;
@@ -44,20 +44,20 @@ public class SurfaceOverlay implements IndoorsSurfaceOverlay {
         int y =  (int)java.lang.Math.round((mPy*surfaceState.getScaledOverlaySize(1)*surfaceState.mapZoomFactor*surfaceState.mapZoomFactor));
         x=x+(int)java.lang.Math.round(surfaceState.mapX);
         y=y+(int)java.lang.Math.round(surfaceState.mapY);
-        Log.i("coord", "x="+x);
+/*        Log.i("coord", "x="+x);
         Log.i("coord", "y="+y);
         Log.i("coord", ""+surfaceState.getScaledOverlaySize(1)); // размер объекта в 1мм
         Log.i("coord", "surfaceState.mapX="+surfaceState.mapX); // смещение карты
-        Log.i("coord", ""+surfaceState.mapZoomFactor);
+        Log.i("coord", ""+surfaceState.mapZoomFactor);*/
 
         //int width = (int)java.lang.Math.round(10/surfaceState.getScaledOverlaySize(10));
         //int height = (int)java.lang.Math.round(10/surfaceState.getScaledOverlaySize(10)); круг всегда одного размера на экране
         int width=20;
         int height=20;
-        Log.i("coord", "scaled1="+(surfaceState.getScaledOverlaySize(1)));
+/*        Log.i("coord", "scaled1="+(surfaceState.getScaledOverlaySize(1)));
         Log.i("coord", "scaled2="+(surfaceState.getScaledOverlaySize(2)));
         Log.i("coord", "Zoom="+surfaceState.mapZoomFactor);
-        Log.i("coord", "width="+width);
+        Log.i("coord", "width="+width);*/
 
 
         ShapeDrawable mDrawable = new ShapeDrawable(new OvalShape());

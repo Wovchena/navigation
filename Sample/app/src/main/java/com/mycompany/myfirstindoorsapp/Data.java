@@ -69,14 +69,14 @@ public class Data {
                     .y - RealCoordForI[1], 2);
         }
         double[] res = new double[2];
-        res[0] = indoorsDeviationSumm / indoors.size();
+        res[0] = sqrt(indoorsDeviationSumm / indoors.size())/1000;//in meters
 
         for (TimeAndPos f : filter) {
             double[] RealCoordForF = getRealCoord(f.t);
             filterDeviationSumm += Math.pow(f.c.x - RealCoordForF[0], 2) + Math.pow(f.c.y -
                     RealCoordForF[1], 2);
         }
-        res[1]=filterDeviationSumm/filter.size();
+        res[1]=sqrt(filterDeviationSumm/filter.size())/1000; // in meters
         //TODO some tests are needed
         return res; // среднеквадратичное отклонение для indoors and Kalman
     }

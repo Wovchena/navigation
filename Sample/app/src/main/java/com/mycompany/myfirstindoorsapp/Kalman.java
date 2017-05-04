@@ -6,20 +6,17 @@ import org.apache.commons.math3.filter.KalmanFilter;
 import org.apache.commons.math3.filter.MeasurementModel;
 import org.apache.commons.math3.filter.ProcessModel;
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
-import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
-import org.apache.commons.math3.random.JDKRandomGenerator;
-import org.apache.commons.math3.random.RandomGenerator;
 
 /**
  * Work with Kalmant filter: creates specific matrixes, gives estimation
  */
 
 public class Kalman {
-    long dt; // time of new accel (20 ms?)
-    double accelNoise; // its sqrt(dispertion)
-    double measurementNoise; // its sqrt(dispertion)
+    long dt=20; // time of new accel (20 micros)
+    double accelNoise;
+    double measurementNoise;
     KalmanFilter filter;
 
 
@@ -57,8 +54,8 @@ public class Kalman {
     1 0 0 0
     0 1 0 0*/
         //TODO check how mesurement phase is performed
-        RealMatrix H = new Array2DRowRealMatrix(new double[][]{{1, 0, 0, 0},
-                {0, 1, 0, 0d}});
+        RealMatrix H = new Array2DRowRealMatrix(new double[][]{{1, 0, 0 ,0},
+                {0, 1, 0, 0}});
 
         //TODO Q matrix (cov)
         // это матожидание квадрата разностей
@@ -66,10 +63,16 @@ public class Kalman {
         RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise * accelNoise);
         // P0 = [ 999 0 ]
 //      [ 0 999 ]
-        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{999, 0}, {999, 0}});
+        //TODO changed dim of P0
+        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{999999999,0,0,0},
+                {0, 999999999, 0, 0},
+                {0, 0, 999999999, 0},
+                {0, 0, 0, 999999999}});
 
         // R = [ measurementNoise^2 ]
-        RealMatrix R = new Array2DRowRealMatrix(new double[]{Math.pow(measurementNoise, 2)});
+        RealMatrix R = new Array2DRowRealMatrix(new double[][]{{Math.pow(measurementNoise, 2),
+                0},
+                {0, Math.pow(measurementNoise, 2)}});
 
 
         ProcessModel pm = new DefaultProcessModel(A, B, Q, x, P0);

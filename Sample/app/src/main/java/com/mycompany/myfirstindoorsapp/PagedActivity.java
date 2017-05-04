@@ -73,32 +73,34 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 
     public static final int REQUEST_CODE_PERMISSIONS = 34168; //Random request code, use your own
     public static final int REQUEST_CODE_LOCATION = 58774; //Random request code, use your own
-    public final int POINTMODE=0; // modes of error calculating
-    public final int LINEMODE=1;
-    public int numberOfSettedPoints;
+    public final int POINTMODE = 0; // modes of error calculating
+    public final int LINEMODE = 1;
     public SurfaceOverlay[] createdOverlays;
     public int mesureMode;
-    public Coordinate singlePoint=null;
-    public Coordinate[] twoPoints=new Coordinate[2];
-    PagedActivity pagedActivity=null;
+    public Coordinate singlePoint = null;
+    public Coordinate[] twoPoints = new Coordinate[2];
+    PagedActivity pagedActivity = null;
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
     ViewPager NonSwipeableViewPager;
     private IndoorsSurfaceFragment indoorsSurfaceFragment = null;
     private Toast progressToast;
     private static int lastProgress = 0;
-    private static String LICENSEKEY = "80015283-2556-4e16-96e0-193c97ad660b";
+    private static String LICENSEKEY = "54c244e7-be8b-446a-b320-ad008109ac7e";
     private boolean connected = false;
     IndoorsSurfaceFactory.Builder surfaceBuilder;
-    private boolean firstCall = false; // определение готовности идор сервиса (был ли сделан вызов updatePosition)
-    Kalman kalman=null;
-    Accel accel=null;
-    Data data=null;
-    int FLOORLVL=0;
-    float rotation=0; //Real world orientation of this building in degrees. 0 is north.
-    Building building=null;
-    double accelNoise=0.1; //TODO info after tries
-    double measurementNoise=10; //TODO info after tries
+    private boolean firstCall = false; // определение готовности индор сервиса (был ли сделан
+    // вызов updatePosition)
+    Kalman kalman = null;
+    Accel accel = null;
+    Data data = null;
+    int FLOORLVL = 0;
+    float rotation = 0; //Real world orientation of this building in degrees. 0 is north.
+    Building building = null;
+    double accelNoise = 10.357431855947539;
+    double measurementNoise = 2000;
     Coordinate currentPosition;
+    SurfaceOverlay overlayKalman = null;
+
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
@@ -106,74 +108,78 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         return true;
     }
 
-    public SurfaceOverlay[] refreshOverlay(SurfaceOverlay[] so)
-    {
-        Log.d("Overlaydragon", "asdfasdfasddf");
-        for (SurfaceOverlay i : so)
-        {
-            if (i!=null) {
-                Log.d("Overlaydragon", i.toString());
-                boolean tmp=indoorsSurfaceFragment.removeOverlay(i);
-                Log.d("Overlayfire", Boolean.toString(tmp));
+    public SurfaceOverlay[] refreshOverlay(SurfaceOverlay[] so) {
+        for (SurfaceOverlay i : so) {
+            if (i != null) {
+                boolean tmp = indoorsSurfaceFragment.removeOverlay(i);
             }
         }
         indoorsSurfaceFragment.updateSurface();
         return new SurfaceOverlay[2];
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
         switch (item.getItemId()) {
             case R.id.pointMode:
                 item.setChecked(true);
-                mesureMode=POINTMODE;
-                createdOverlays=refreshOverlay(createdOverlays);
-                twoPoints[0]=null;
-                twoPoints[1]=null;
-                singlePoint=null;
+                mesureMode = POINTMODE;
+                createdOverlays = refreshOverlay(createdOverlays);
+                twoPoints[0] = null;
+                twoPoints[1] = null;
+                singlePoint = null;
                 return true;
             case R.id.lineMode:
                 item.setChecked(true);
-                mesureMode=LINEMODE;
-                numberOfSettedPoints=0;
-                createdOverlays=refreshOverlay(createdOverlays);
-                twoPoints[0]=null;
-                twoPoints[1]=null;
+                mesureMode = LINEMODE;
+                createdOverlays = refreshOverlay(createdOverlays);
+                twoPoints[0] = null;
+                twoPoints[1] = null;
+                singlePoint = null;
                 return true;
             case R.id.menu_startMesurement:
                 // begin mesurement
+                if ((currentPosition == null) || ((singlePoint == null) && (twoPoints[0] == null))) {
+                    Toast.makeText(this, "Set pts", Toast.LENGTH_SHORT).show();
+                } else {
 
-                double[] coord=new double[2];
-                coord[0]=currentPosition.x;
-                coord[1]=currentPosition.y;
-                RealVector x = new ArrayRealVector(coord);
-                kalman=new Kalman (accelNoise, measurementNoise, x);
-                accel.start(mesureMode);
-                if ((mesureMode==POINTMODE)&&(singlePoint!=null)) {
-                    data = new Data(singlePoint);
-                }
-                if ((mesureMode==LINEMODE)&&(twoPoints!=null)) {
-                    data = new Data(twoPoints[0], twoPoints[1], SystemClock.uptimeMillis());
-                }
-                if((twoPoints!=null)&&(singlePoint!=null))
-                {
-                    Toast.makeText(this, "singlePoint!=!=!null!=!=!twoPoints", Toast.LENGTH_SHORT)
-                            .show();
-                }
-                if((twoPoints!=null)&&(singlePoint!=null))
-                {
-                    Toast.makeText(this, "singlePoint==null==twoPoints", Toast.LENGTH_SHORT).show();
+                    double[] coord = new double[4];
+                    coord[0] = currentPosition.x;
+                    coord[1] = currentPosition.y;
+                    coord[2] = 0;
+                    coord[3] = 0;
+                    RealVector x = new ArrayRealVector(coord);
+                    kalman = new Kalman(accelNoise, measurementNoise, x);
+                    accel.start(mesureMode);
+                    if ((mesureMode == POINTMODE) && (singlePoint != null)) {
+                        data = new Data(singlePoint);
+                        Toast.makeText(this, "new Data (singlePoint)", Toast.LENGTH_SHORT).show();
+                    }
+                    if ((mesureMode == LINEMODE) && (twoPoints[0] != null) && (twoPoints[1] != null)) {
+                        data = new Data(twoPoints[0], twoPoints[1], SystemClock.uptimeMillis() * 1000);
+                        Toast.makeText(this, "new Data (twoPoints)", Toast.LENGTH_SHORT).show();
+                    }
+                    if ((twoPoints[0] != null) && (twoPoints[1] != null) && (singlePoint != null)) {
+                        Toast.makeText(this, "singlePoint!=!=!null!=!=!twoPoints[0][1]", Toast
+                                .LENGTH_SHORT).show();
+                    }
+                    if ((twoPoints[0] == null) && (twoPoints[1] == null) && (singlePoint == null)) {
+                        Toast.makeText(this, "singlePoint==null==twoPoints[0][1]", Toast.LENGTH_SHORT)
+                                .show();
+                    }
                 }
                 return true;
             case R.id.menu_stopMesurement:
-                double[] standartDeviations=data.calc(SystemClock.uptimeMillis());
+                double[] standartDeviations = data.calc(SystemClock.uptimeMillis() * 1000);
                 accel.stop();
-                kalman=null;
+                kalman = null;
+                fragment.addItem(pagedActivity, indoorsSurfaceFragment, "Deviation for indoors=" +
+                        standartDeviations[0] + "; and for Kalman=" + standartDeviations[1], new Coordinate(0, 0, 0));
 
 
-                Toast.makeText(this, "Deviation for indoors="+standartDeviations[0]+"; and for " +
-                    "Kalman="+standartDeviations[1], Toast.LENGTH_LONG).show();
-                data=null;
+                Toast.makeText(this, "Deviation for indoors=" + standartDeviations[0] + "; and for " +
+                        "Kalman=" + standartDeviations[1], Toast.LENGTH_LONG).show();
+                data = null;
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -183,6 +189,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     private void continueLoading() {
 // everything is ok
     }
+
     private void requestPermissionsFromUser() {
         /**
          * Since API level 23 we need to request permissions for so called dangerous permissions from the user.
@@ -195,7 +202,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 
             if (permissionCheckForLocation != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(
-                        new String[] {
+                        new String[]{
                                 Manifest.permission.ACCESS_COARSE_LOCATION
                         },
                         REQUEST_CODE_PERMISSIONS);
@@ -214,6 +221,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     /**
      * The Android system calls us back
      * after the user has granted permissions (or denied them)
+     *
      * @param requestCode
      * @param permissions
      * @param grantResults
@@ -290,11 +298,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
      */
     private GoogleApiClient client;
 
-    public void ClickonDiscList(View view) {
-        Intent intent = new Intent(this, DiscountsOfShop.class);
-        startActivity(intent);
 
-    }
 
     public IndoorsSurfaceFragment createIndoorsFragment() {
 
@@ -323,41 +327,21 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 
                 @Override
                 public void onClick(Coordinate coordinate) {
-                    List<Zone> zones =indoorsSurfaceFragment.getZones();
-                    Log.d ("List of coords", zones.toString());
-                    //indoorsSurfaceFragment.routeTo(coordinate, true);
-                    /*IndoorsFactory.getInstance().getBuilding(Building building,
-                            LoadingBuildingCallback listener)
-                    IndoorsFactory.getInstance().getZones();*/
-
-
 
                 }
             });
 
-//            NonSwipeableViewPager.setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View view, MotionEvent motionEvent) {
-//                    if (motionEvent.ACTION_DOWN)
-//                    return false;
-//                }
-//            });
-
             indoorsSurfaceFragment.registerOnSurfaceLongClickListener(new IndoorsSurface.OnSurfaceLongClickListener() {
                 public void onLongClick(final Coordinate mapPoint) {
-                    if (POINTMODE==mesureMode)
-                    {
+                    if (POINTMODE == mesureMode) {
                         final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                         indoorsSurfaceFragment.addOverlay(overlay);
                         indoorsSurfaceFragment.updateSurface();
-
                         View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
-                        final EditText editText = (EditText) view.findViewById(R.id.editTextDiscount);
                         AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                         builder.setTitle("Set one point")
                                 .setMessage(mapPoint.toString())
                                 .setCancelable(true)
-
                                 .setView(view)
                                 .setNegativeButton("Cancel",
                                         new DialogInterface.OnClickListener() {
@@ -368,35 +352,27 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                                         })
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int arg1) {
-                                        createdOverlays[0]=overlay;
-                                        singlePoint=mapPoint;
-                                        fragment.addItem(pagedActivity, indoorsSurfaceFragment, editText.getText().toString(), mapPoint);
+                                        createdOverlays[0] = overlay;
+                                        singlePoint = mapPoint;
                                     }
                                 });
-
                         AlertDialog alert = builder.create();
                         alert.show();
-                    }
-                    else if (LINEMODE==mesureMode)
-                    {
+                    } else if (LINEMODE == mesureMode) {
                         Log.d("linemodezomb", "asfffhy");
-                        if ((null!=twoPoints[0])&&(null!=twoPoints[1])) {
+                        if ((null != twoPoints[0]) && (null != twoPoints[1])) {
                             Toast.makeText(PagedActivity.this, "Refresh points by reselecting mode", Toast.LENGTH_LONG).show();
                             return;
                         }
-                        if ((null==twoPoints[0])&&(null==twoPoints[1]))
-                        {
+                        if ((null == twoPoints[0]) && (null == twoPoints[1])) {
                             final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                             indoorsSurfaceFragment.addOverlay(overlay);
                             indoorsSurfaceFragment.updateSurface();
-
                             View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
-                            final EditText editText = (EditText) view.findViewById(R.id.editTextDiscount);
                             AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                             builder.setTitle("Set first point")
                                     .setMessage(mapPoint.toString())
                                     .setCancelable(true)
-
                                     .setView(view)
                                     .setNegativeButton("Cancel",
                                             new DialogInterface.OnClickListener() {
@@ -407,25 +383,20 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                                             })
                                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int arg1) {
-                                            createdOverlays[0]=overlay;
-                                            twoPoints[0]=mapPoint;
-                                            fragment.addItem(pagedActivity, indoorsSurfaceFragment, editText.getText().toString(), mapPoint);
+                                            createdOverlays[0] = overlay;
+                                            twoPoints[0] = mapPoint;
                                         }
                                     });
-
                             AlertDialog alert = builder.create();
                             alert.show();
                             return;
                         }
 
-                        if ((null!=twoPoints[0])&&(null==twoPoints[1]))
-                        {
+                        if ((null != twoPoints[0]) && (null == twoPoints[1])) {
                             final SurfaceOverlay overlay = new SurfaceOverlay(mapPoint);
                             indoorsSurfaceFragment.addOverlay(overlay);
                             indoorsSurfaceFragment.updateSurface();
-
                             View view = getLayoutInflater().inflate(R.layout.dialog_create_discount, null);
-                            final EditText editText = (EditText) view.findViewById(R.id.editTextDiscount);
                             AlertDialog.Builder builder = new AlertDialog.Builder(PagedActivity.this);
                             builder.setTitle("Set second point")
                                     .setMessage(mapPoint.toString())
@@ -441,50 +412,23 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                                             })
                                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int arg1) {
-                                            createdOverlays[1]=overlay;
-                                            twoPoints[1]=mapPoint;
-                                            fragment.addItem(pagedActivity, indoorsSurfaceFragment, editText.getText().toString(), mapPoint);
+                                            createdOverlays[1] = overlay;
+                                            twoPoints[1] = mapPoint;
                                         }
                                     });
-
                             AlertDialog alert = builder.create();
                             alert.show();
                             return;
                         }
                         Toast.makeText(PagedActivity.this, "mesureMode=LINEMODE, but strange values of twoPoints[]", Toast.LENGTH_LONG).show();
-
-
                     }
                     Toast.makeText(PagedActivity.this, "All points are efined", Toast.LENGTH_LONG).show();
 
-
-
-
                 }
             });
-            // http://stackoverflow.com/questions/33264031/calling-dialogfragments-show-from-within-onrequestpermissionsresult-causes/34204394#34204394
-            // http://stackoverflow.com/questions/17184653/commitallowingstateloss-in-fragment-activities
 
-//            new Handler().post(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                    transaction.add(android.R.id.content, indoorsSurfaceFragment);
-//
-//                    transaction.commit();
-//
-//
-//                }
-//            });
         }
-        //indoorsSurfaceFragment.setViewMode(ViewMode.HIGHLIGHT_CURRENT_ZONE);// does not work
-        //indoorsSurfaceFragment.updateSurface();
-        indoorsSurfaceFragment.setViewMode(ViewMode.HIGHLIGHT_ALL_ZONES); // this works
-
-
         return indoorsSurfaceFragment;
-
     }
 
     private IndoorsFactory.Builder initializeIndoorsLibrary() {
@@ -509,7 +453,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
          * TODO: replace 12345 with the id of the building you uploaded to our cloud using the MMT
          * This is the ID of the Building as shown in the desktop Measurement Tool (MMT)
          */
-        indoorsBuilder.setBuildingId((long) 967880259);
+        indoorsBuilder.setBuildingId((long) 991719462);
         // callback for indoo.rs-events
         indoorsBuilder.setUserInteractionListener(this);
 
@@ -528,39 +472,15 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         surfaceBuilder = new IndoorsSurfaceFactory.Builder();
         surfaceBuilder.setIndoorsBuilder(indoorsBuilder);
 
-        /*SurfacePainterConfiguration.PaintConfiguration paintConfiguration = new SurfacePainterConfiguration.PaintConfiguration();
-        paintConfiguration.setTextSize(new Float (0.1));
-        SurfacePainterConfiguration config = DefaultSurfacePainterConfiguration.getConfiguration();
-        config.setZoneNamePaintConfiguration(paintConfiguration);
-        paintConfiguration.setColor(Color.GREEN);
-        String hexColor = String.format("#%06X", (0xFFFFFF & paintConfiguration.getColor()));
-        Log.d ("colorcolor", hexColor);
-        config.setZonePaintInnerPaintConfiguration (paintConfiguration);
-        surfaceBuilder.setSurfacePainterConfiguration(config);*/
-        SurfacePainterConfiguration configuration = DefaultSurfacePainterConfiguration
-                .getConfiguration();
-
-        /*configuration.getUserPositionCircleInlinePaintConfiguration().setColor(Color.RED);
-        configuration.getLargeCircleOutlinePaintConfiguration().setColor(Color.RED);
-        configuration.getRoutingPathPaintConfiguration().setColor(Color.RED);*/
-        SurfacePainterConfiguration.PaintConfiguration c = configuration.getZoneNamePaintConfiguration();
-
-        c.setColor(Color.BLUE);
-        c.setDimensionPixelSize(350);
-
-        configuration.getZonePaintInnerPaintConfiguration().setColor(Color.GREEN);
-        surfaceBuilder.setSurfacePainterConfiguration(configuration);
-
         return surfaceBuilder.build();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        pagedActivity=this;
+        pagedActivity = this;
         super.onCreate(savedInstanceState);
-        accel=new Accel(this, (SensorManager)getSystemService(Context.SENSOR_SERVICE), rotation);
-        createdOverlays=new SurfaceOverlay[2];
-
+        accel = new Accel(this, (SensorManager) getSystemService(Context.SENSOR_SERVICE), rotation);
+        createdOverlays = new SurfaceOverlay[2];
 
 
         fragmentList = new ArrayList<>();
@@ -603,10 +523,10 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
             }
         };
 
-        // Add 3 tabs, specifying the tab's text and TabListener
+        // Add 2 tabs, specifying the tab's text and TabListener
         actionBar.addTab(actionBar.newTab().setText("Map")
                 .setTabListener(tabListener));
-        actionBar.addTab(actionBar.newTab().setText("Discounts")
+        actionBar.addTab(actionBar.newTab().setText("Logs")
                 .setTabListener(tabListener));
 
 
@@ -620,13 +540,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                         getSupportActionBar().setSelectedNavigationItem(position);
                     }
                 });
-/*        indoorsSurfaceFragment.getView().setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Log.d("Touched", motionEvent.toString());
-                return false;
-            }
-        });*/
+
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -647,7 +561,6 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     }
 
     public void positionUpdated(Coordinate userPosition, int accuracy) {
-        Log.i ("positionUpdated", "start of function");
         /**
          * Is called each time the Indoors Library calculated a new position for the user
          * If Lat/Lon/Rotation of your building are set correctly you can calculate a
@@ -655,50 +568,23 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
          */
 
         // if first try, itialize list of zones
-        if (connected==true && firstCall == false) // if first try, itialize list of zones
+        if (connected == true && firstCall == false) // if first try
         {
-            rotation=building.getRotation();
+            rotation = building.getRotation();
             firstCall = true;
-
-            List<Zone> zoneList = indoorsSurfaceFragment.getZones();
-            for (Zone z : zoneList)
-            {
-                int x=0, y=0;
-                for (Coordinate c : z.getZonePoints()) {
-                    x = x + c.x;
-                    y+=c.y;
-                }
-                Coordinate center = new Coordinate (x/z.getZonePoints().size(), y/z.getZonePoints().size(), z.getZonePoints().get(0).z);
-                fragment.addItem(pagedActivity, indoorsSurfaceFragment, z.getName(), center);
-            }
-
         }
 
-        currentPosition=userPosition;
-       /* Coordinate c = indoorsSurfaceFragment.getCurrentUserPosition();
-        if (c != null) {
-            Toast.makeText(
-                    this,
-                    "User is located at " + c.toString(), Toast.LENGTH_SHORT).show();
-        }*/
-        /*GeoCoordinate geoCoordinate = indoorsSurfaceFragment.getCurrentUserGpsPosition(); // для маленьких перемещений изменения незаметны
+        currentPosition = userPosition;
 
-		if (geoCoordinate != null) {
-			Toast.makeText(
-			    this,
-			    "User is located at " + geoCoordinate.getLatitude() + ","
-			    + geoCoordinate.getLongitude(), Toast.LENGTH_SHORT).show();
-		}*/
-        if (kalman!=null)
-        {
-            long time = SystemClock.uptimeMillis();
-            double[] coord=new double [2];
-            coord[0]=(double)(userPosition.x);
-            coord[1]=(double)userPosition.y;
+        if (kalman != null) {
+            long time = SystemClock.uptimeMillis() * 1000;
+            double[] coord = new double[2];
+            coord[0] = (double) userPosition.x;
+            coord[1] = (double) userPosition.y;
             kalman.correct(new ArrayRealVector(coord));
             double[] estimatedState;
-            estimatedState=kalman.getStateEstimationVector().toArray();
-            data.addToFilter(time, new Coordinate((int)estimatedState[0], (int)estimatedState[1], FLOORLVL));
+            estimatedState = kalman.getStateEstimationVector().toArray();
+            data.addToFilter(time, new Coordinate((int) estimatedState[0], (int) estimatedState[1], FLOORLVL));
 
             data.addToIndoors(time, userPosition);
         }
@@ -714,42 +600,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     public void buildingLoaded(Building building) {
         // Fake a 100% progress to your UI when you receive info that the download is finished.
         showDownloadProgressToUser(100);
-        this.building=building;
-        // indoo.rs SDK successfully loaded the building you requested and
-        // calculates a position now
-        /*Toast.makeText(
-                this,
-                "Building is located at " + building.getLatOrigin() / 1E6 + ","
-                        + building.getLonOrigin() / 1E6, Toast.LENGTH_SHORT).show();*/
-
-		/*if (connected==true) { // путь от точки до точки из гайда indoo.rs
-			try {
-				sleep(3000); //  да, я знаю, но приложуха не успевает загрузить каике-то waypoints, и вообще я просто так попробовал, путь же должен простраиваться по запросу пользователя, а это будет значительно позже вызываться из другого метода
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
-			Coordinate start = new Coordinate(200, 200, 0);
-			Coordinate end = new Coordinate(47000, 25000, 0);
-
-			Indoors indoors = indoorsSurfaceFragment.getIndoors();
-			indoors.getRouteAToB(start, end, new RoutingCallback() {
-				@Override
-				public void onError(IndoorsException arg0) {
-					Log.i("ERROR", "Error in getRouteAToB()" + arg0.toString());
-				}
-
-				@Override
-				public void setRoute(ArrayList<Coordinate> route) {
-					indoorsSurfaceFragment.getSurfaceState().setRoutingPath(route);
-					// this is how to enable route snapping starting with version 3.8
-					IndoorsFactory.getInstance().enableRouteSnapping(route);
-					indoorsSurfaceFragment.updateSurface();
-				}
-			});
-		}*/
-
-
+        this.building = building;
     }
 
     private void showDownloadProgressToUser(int progress) {
@@ -761,7 +612,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                     progressToast.cancel();
                 }
 
-                progressToast = Toast.makeText(this, "Building downloading : "+progress+"%", Toast.LENGTH_SHORT);
+                progressToast = Toast.makeText(this, "Building downloading : " + progress + "%", Toast.LENGTH_SHORT);
                 progressToast.show();
             }
         }
@@ -797,18 +648,6 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
 
     @Override
     public void enteredZones(List<Zone> zones) {
-        Log.d ("enteredZones", "start of enteredZones(List<Zone> zones)");
-        if (zones.size()>=1) {
-            final Toast t=Toast.makeText(this, "You are in " + zones.get(0).getName(), Toast.LENGTH_SHORT);
-            t.show();
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    t.cancel();
-                }
-            }, 1000);
-        }
     }
 
     @Override
@@ -856,15 +695,23 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     public void onBackPressed() {
     }
 
-    void onAccelChanged (double[] accelData)
-            //store accelData
+    void onAccelChanged(double[] accelData)
+    //store accelData
     {
-        if (kalman!=null) {
-            long time = SystemClock.uptimeMillis();
+        if (kalman != null) {
+            long time = SystemClock.uptimeMillis() * 1000;
             kalman.predict(new ArrayRealVector(accelData));
             double[] estimatedState;
-            estimatedState=kalman.getStateEstimationVector().toArray();
-            data.addToFilter(time, new Coordinate((int)estimatedState[0], (int)estimatedState[1], FLOORLVL));
+            estimatedState = kalman.getStateEstimationVector().toArray();
+            data.addToFilter(time, new Coordinate((int) estimatedState[0], (int) estimatedState[1], FLOORLVL));
+            Log.d("velocityvelocity", ""+estimatedState[2]+" | "+ estimatedState[3]);
+            if (null != overlayKalman) {
+                indoorsSurfaceFragment.removeOverlay(overlayKalman);
+            }
+            overlayKalman = new SurfaceOverlay(new Coordinate((int)
+                    estimatedState[0], (int) estimatedState[1], FLOORLVL));
+            indoorsSurfaceFragment.addOverlay(overlayKalman);
+            indoorsSurfaceFragment.updateSurface();
         }
     }
 }

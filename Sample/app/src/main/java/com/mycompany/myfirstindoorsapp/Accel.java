@@ -1,7 +1,5 @@
 package com.mycompany.myfirstindoorsapp;
 
-import android.content.Context;
-import android.graphics.pdf.PdfDocument;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -20,26 +18,20 @@ public class Accel implements SensorEventListener {
     private float[] accelData = new float[3];
     private float[] magnetData = new float[3];
     private float[] gravityData = new float[3];
-    private float[] rotationMatrix = new float[16];
-    private float[] OrientationData = new float[3];
+    private float[] rotationMatrix = new float[9];
     private double[] aInBasic=new double[3];
-    private double[] doubleRotationMatrix=new double[9];
+    private double[][] doubleRotationMatrix=new double[3][3];
     private double[] doubleAccelData=new double[3];
     private double rotation;
     private double[] aInReal=new double[2];
 
-    public Accel(PagedActivity pa, SensorManager sm, float rotationInDeg) // you can get
-    // SensorManager
-    // by
-    // msensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+    public Accel(PagedActivity pa, SensorManager sm, float rotationInDeg)
     {
-        //TODO it is possible to pass info to Kalman wothout pa
         mSensorManager = sm;
         this.pa=pa;
         magnetData[0]=magnetData[1]=magnetData[2]=0;
         gravityData[0]=gravityData[1]=gravityData[2]=0;
         this.rotation= Math.toRadians(rotationInDeg);
-
     }
 
     public void start(int mode) {
@@ -58,22 +50,33 @@ public class Accel implements SensorEventListener {
     public void onSensorChanged(SensorEvent sensorEvent) {
         final int type = sensorEvent.sensor.getType();
 
-        if (type == Sensor.TYPE_ACCELEROMETER) {
+        if (type == Sensor.TYPE_LINEAR_ACCELERATION) {
             accelData = sensorEvent.values.clone();
+            if (accelData[0]>0.1) {
+                Log.d("accelaccel", "" + accelData[0]);
+            }
             SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
-            SensorManager.getOrientation(rotationMatrix, OrientationData);
-            for (int i=0; i<9; i++)
+            int c=0;
+            for (int i=0; i<3; i++)
             {
-                doubleRotationMatrix[i]=rotationMatrix[i];
+                for (int j=0; j<3; j++) {
+                    doubleRotationMatrix[i][j] = rotationMatrix[c];
+                    c++;
+                }
             }
             for (int i=0; i<3; i++)
             {
                 doubleAccelData[i]=accelData[i];
             }
             aInBasic=(new Array2DRowRealMatrix(doubleRotationMatrix)).operate(doubleAccelData);
+            if (aInBasic[0]>0.1){
+                Log.d("directiondirection", ""+aInBasic[0]+" | "+ aInBasic[1]+" | "+aInBasic[2]);
+            }
 
             aInReal[0]=aInBasic[0]*Math.cos(rotation)-aInBasic[1]*Math.sin(rotation);
+            aInReal[0]=aInReal[0]*1000;
             aInReal[1]=aInBasic[0]*Math.sin(rotation)+aInBasic[1]*Math.cos(rotation);
+            aInReal[1]=aInReal[1]*1000;
             //TODO is rotation right?
             //pass only x and y in accelData to onAccelCahnged()
             pa.onAccelChanged(aInReal);

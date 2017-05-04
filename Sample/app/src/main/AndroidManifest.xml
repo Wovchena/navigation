@@ -47,7 +47,6 @@
              </service>
         -->
 
-        <activity android:name=".DiscountsOfShop"></activity>
     </application>
 
 </manifest>
