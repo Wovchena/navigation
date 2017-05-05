@@ -28,6 +28,7 @@ public class Accel implements SensorEventListener {
     double [] meanAInReal=new double[2];
     long lastTimeSend = 0;
     int counter = 0;
+    double tmp;
 
     public Accel(PagedActivity pa, SensorManager sm, float rotationInDeg)
     {
@@ -78,6 +79,9 @@ public class Accel implements SensorEventListener {
                 Log.d("directiondirection", ""+aInBasic[0]+" | "+ aInBasic[1]+" | "+aInBasic[2]);
             }
 Log.d("rotatinrotation", ""+rotation);
+            tmp=aInBasic[0];
+            aInBasic[0]=aInBasic[1];
+            aInBasic[1]=tmp;
             aInReal[0]=aInBasic[0]*Math.cos(rotation)+aInBasic[1]*Math.sin(rotation);
             aInReal[0]=aInReal[0]*1000;
             aInReal[1]=aInBasic[0]*Math.sin(rotation)*(-1)+aInBasic[1]*Math.cos(rotation);
