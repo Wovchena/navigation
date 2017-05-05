@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.apache.commons.math3.filter.DefaultMeasurementModel;
@@ -23,23 +24,13 @@ import org.apache.commons.math3.linear.RealMatrix;
     private SensorManager msensorManager;
     // A = [ 1 ]
     RealMatrix A = new Array2DRowRealMatrix(new double[] { 1d });
-    // no control input
-    RealMatrix B = null;
-    // H = [ 1 ]
-    RealMatrix H = new Array2DRowRealMatrix(new double[] { 1d });
-    // Q = [ 0 ]
-    RealMatrix Q = new Array2DRowRealMatrix(new double[] { 0 });
-    // R = [ 0 ]
-    RealMatrix R = new Array2DRowRealMatrix(new double[] { 0 });
 
-    ProcessModel pm
-            = new DefaultProcessModel(A, B, Q, new ArrayRealVector(new double[] { 0 }), null);
-    MeasurementModel mm = new DefaultMeasurementModel(H, R);
-    KalmanFilter filter = new KalmanFilter(pm, mm);
+
     private float[] rotationMatrix;
     private float[] accelData;
     private float[] magnetData;
     private float[] OrientationData;
+        float [] myrotationMatrix=new float[9];
 
     public TextView xyView;
     public TextView xzView;
@@ -56,6 +47,7 @@ import org.apache.commons.math3.linear.RealMatrix;
         accelData = new float[3];
         magnetData = new float[3];
         OrientationData = new float[3];
+
 
         xyView = (TextView) findViewById(diplomar.myorientationtest.R.id.xyValue);  //
         xzView = (TextView) findViewById(diplomar.myorientationtest.R.id.xzValue);  // ���� ��������� ���� ��� ������ ���������
@@ -82,9 +74,30 @@ import org.apache.commons.math3.linear.RealMatrix;
     }
 
     public void onSensorChanged(SensorEvent event) {
+        double[][] doubleRotationMatrix=new double[3][3];
         loadNewSensorData(event);
         SensorManager.getRotationMatrix(rotationMatrix, null, accelData, magnetData);
         SensorManager.getOrientation (rotationMatrix, OrientationData);
+        SensorManager.getRotationMatrix(myrotationMatrix, null, accelData, magnetData);
+        int c=0;
+        for (int i=0; i<3; i++)
+        {
+            for (int j=0; j<3; j++) {
+                doubleRotationMatrix[i][j] = myrotationMatrix[c];
+                c++;
+            }
+        }
+
+        double[] vector=new double[3];
+        vector[0]=100;
+        vector[1]=0;
+        vector[2]=0;
+        vector=(new Array2DRowRealMatrix(doubleRotationMatrix)).operate(vector);
+        /*aInReal[0]=aInBasic[0]*Math.cos(rotation)-aInBasic[1]*Math.sin(rotation);
+        aInReal[0]=aInReal[0]*1000;
+        aInReal[1]=aInBasic[0]*Math.sin(rotation)+aInBasic[1]*Math.cos(rotation);*/
+        Log.d("vector", ""+vector[0]+" | "+vector[1]+" | "+vector[2]);
+
 
         xyView.setText(String.valueOf(Math.round(Math.toDegrees(OrientationData[0]))));
         zyView.setText(String.valueOf(Math.round(Math.toDegrees(OrientationData[1]))));

@@ -81,9 +81,9 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     float rotation = 0; //Real world orientation of this building in degrees. 0 is north.
     Building building = null;
     double accelNoise = 10.357431855947539;
-    double measurementNoise = 2000;
+    double measurementNoise = 600;
     Coordinate currentPosition;
-    SurfaceOverlay overlayKalman = null;
+    RedSurfaceOverlay overlayKalman = null;
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -164,6 +164,10 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 Toast.makeText(this, "Deviation for indoors=" + standartDeviations[0] + "; and for " +
                         "Kalman=" + standartDeviations[1], Toast.LENGTH_LONG).show();
                 data = null;
+                if (overlayKalman!=null) {
+                    indoorsSurfaceFragment.removeOverlay(overlayKalman);
+                    indoorsSurfaceFragment.updateSurface();
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -463,7 +467,6 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     protected void onCreate(Bundle savedInstanceState) {
         pagedActivity = this;
         super.onCreate(savedInstanceState);
-        accel = new Accel(this, (SensorManager) getSystemService(Context.SENSOR_SERVICE), rotation);
         createdOverlays = new SurfaceOverlay[2];
 
 
@@ -551,7 +554,8 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         // if first try, itialize list of zones
         if (connected == true && firstCall == false) // if first try
         {
-            rotation = building.getRotation();
+            this.rotation = building.getRotation();
+            accel = new Accel(this, (SensorManager) getSystemService(Context.SENSOR_SERVICE), rotation);
             firstCall = true;
         }
 
@@ -688,8 +692,9 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
             Log.d("velocityvelocity", ""+estimatedState[2]+" | "+ estimatedState[3]);
             if (null != overlayKalman) {
                 indoorsSurfaceFragment.removeOverlay(overlayKalman);
+                overlayKalman=null;
             }
-            overlayKalman = new SurfaceOverlay(new Coordinate((int)
+            overlayKalman = new RedSurfaceOverlay(new Coordinate((int)
                     estimatedState[0], (int) estimatedState[1], FLOORLVL));
             indoorsSurfaceFragment.addOverlay(overlayKalman);
             indoorsSurfaceFragment.updateSurface();

@@ -1,17 +1,0 @@
-
-msquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®ğ Ğúÿÿÿÿ
-qsquid:S1188"\Reduce this anonymous class number of lines from 31 to at most 20, or make it a named class.(„ø×˜
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚÇ¹¦üÿÿÿÿ
-msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹¾øa
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(„ø×˜
-Fsquid:S1481",Remove this unused "tmprssi" local variable.(šº‰”şÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ış
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ış
-Usquid:S1854";Remove this useless assignment to local variable "tmprssi".(šº‰”şÿÿÿÿ
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûœ©÷
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¡Ğùÿÿÿÿ
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿»Ë×ûÿÿÿÿ
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ƒ¹›úÿÿÿÿ
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôöä
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î›ÿàşÿÿÿÿ
-csquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±

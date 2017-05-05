@@ -1,6 +1,7 @@
 package com.mycompany.myfirstindoorsapp;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.Log;
@@ -16,11 +17,11 @@ import com.customlbs.surface.library.SurfaceState;
  * Created by wov on 27.01.17.
  */
 
-public class SurfaceOverlay implements IndoorsSurfaceOverlay {
+public class RedSurfaceOverlay implements IndoorsSurfaceOverlay {
     Coordinate mapPoint;
-    public SurfaceOverlay (){
+    public RedSurfaceOverlay (){
     }
-    public SurfaceOverlay (Coordinate mapPoint)
+    public RedSurfaceOverlay (Coordinate mapPoint)
     {
         this.mapPoint=mapPoint;
     }
@@ -63,7 +64,7 @@ public class SurfaceOverlay implements IndoorsSurfaceOverlay {
 
 
         ShapeDrawable mDrawable = new ShapeDrawable(new OvalShape());
-        mDrawable.getPaint().setColor(0xff74AC23);
+        mDrawable.getPaint().setColor(Color.RED);
         mDrawable.setBounds(x, y, x + width, y + height);
         mDrawable.draw(canvas);
         //Log.i("coord", ""+mapPoint.score);

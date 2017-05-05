@@ -77,10 +77,10 @@ public class Accel implements SensorEventListener {
             if (aInBasic[0]>0.1){
                 Log.d("directiondirection", ""+aInBasic[0]+" | "+ aInBasic[1]+" | "+aInBasic[2]);
             }
-
-            aInReal[0]=aInBasic[0]*Math.cos(rotation)-aInBasic[1]*Math.sin(rotation);
+Log.d("rotatinrotation", ""+rotation);
+            aInReal[0]=aInBasic[0]*Math.cos(rotation)+aInBasic[1]*Math.sin(rotation);
             aInReal[0]=aInReal[0]*1000;
-            aInReal[1]=aInBasic[0]*Math.sin(rotation)+aInBasic[1]*Math.cos(rotation);
+            aInReal[1]=aInBasic[0]*Math.sin(rotation)*(-1)+aInBasic[1]*Math.cos(rotation);
             aInReal[1]=aInReal[1]*1000;
             counter++;
             meanAInReal[0]+=aInReal[0];

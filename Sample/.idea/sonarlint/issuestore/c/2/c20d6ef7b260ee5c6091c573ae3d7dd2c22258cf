@@ -1,25 +1,25 @@
 
-ksquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡έο¶ύÿÿÿÿ8ΜΐΒ–½+
-qsquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ο΄£8ΡΛπΌ+
-9squid:S2131"Use "Double.toString" instead.(ύ·>8²¦Ω½+
-=squid:S1170"!Make this final field static too.(ς‚Ό―8ζ©αΈ+
-Nsquid:S1199"-Extract this nested code block into a method.(ÒΜβ–ψÿÿÿÿ8Ατ¤–½+
-Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨ζδ‡ϋÿÿÿÿ8χ¤Θ–½+
-Isquid:S1125"(Remove the literal "true" boolean value.(π­Ε‰ÿÿÿÿÿ8ΜΐΒ–½+
-Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒƒ©ωÿÿÿÿ8¬Ύα–½+
-Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ψΫτ’ωÿÿÿÿ8ΜΐΒ–½+
-Psquid:S1066"/Merge this if statement with the enclosing one.(Οσζψÿÿÿÿ8¬Ύα–½+
-Ssquid:S1135"2Complete the task associated to this TODO comment.(“Σÿ‚ϋÿÿÿÿ8ΜΐΒ–½+
-Jsquid:S1125")Remove the literal "false" boolean value.(π­Ε‰ÿÿÿÿÿ8ΜΐΒ–½+
-Ssquid:S1854"7Remove this useless assignment to local variable "tmp".(θέγ8δε–½+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ή©Ϊ§8ΜΐΒ–½+
-squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­8ΜΐΒ–½+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(Β·ς 8ΜΐΒ–½+
-Dsquid:S1481"(Remove this unused "tmp" local variable.(θέγ8δε–½+
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(ρ”Ò8λγ¬™½+
-Bsquid:S1170"!Make this final field static too.(θ–Ή°ώÿÿÿÿ8ΡΛπΌ+
-=squid:S1700"Rename field "pagedActivity"(¤ό†Ηύÿÿÿÿ8ΡΛπΌ+
-hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(Ί¶–·ÿÿÿÿÿ8ΜΐΒ–½+
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Κ΅αψ8¬Ύα–½+
-Nsquid:S1135"2Complete the task associated to this TODO comment.(πΜιώ8¬Ύα–½+
-Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„δξ ϋÿÿÿÿ8¬Ύα–½+
+jsquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ο΄£
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ρ”Ò
+6squid:S1700"Rename field "pagedActivity"(¤ό†Ηύÿÿÿÿ
+Lsquid:S1854"7Remove this useless assignment to local variable "tmp".(θέγ
+Gsquid:S1135"2Complete the task associated to this TODO comment.(Β·ς 
+6squid:S1170"!Make this final field static too.(ς‚Ό―
+;squid:S1170"!Make this final field static too.(θ–Ή°ώÿÿÿÿ
+=squid:S1481"(Remove this unused "tmp" local variable.(θέγ
+hsquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(Ί¶–·ÿÿÿÿÿ8όψ‡·½+
+Psquid:S1066"/Merge this if statement with the enclosing one.(Οσζψÿÿÿÿ8όψ‡·½+
+Nsquid:S1199"-Extract this nested code block into a method.(ÒΜβ–ψÿÿÿÿ8όψ‡·½+
+Isquid:S1125"(Remove the literal "true" boolean value.(π­Ε‰ÿÿÿÿÿ8όψ‡·½+
+Jsquid:S1125")Remove the literal "false" boolean value.(π­Ε‰ÿÿÿÿÿ8όψ‡·½+
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Κ΅αψ8όψ‡·½+
+ksquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡έο¶ύÿÿÿÿ8όψ‡·½+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ή©Ϊ§8όψ‡·½+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(“Σÿ‚ϋÿÿÿÿ8όψ‡·½+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(πΜιώ8όψ‡·½+
+Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„δξ ϋÿÿÿÿ8όψ‡·½+
+Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒƒ©ωÿÿÿÿ8όψ‡·½+
+Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨ζδ‡ϋÿÿÿÿ8όψ‡·½+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­8όψ‡·½+
+Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ψΫτ’ωÿÿÿÿ8όψ‡·½+
+9squid:S2131"Use "Double.toString" instead.(ύ·>8όψ‡·½+

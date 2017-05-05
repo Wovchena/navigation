@@ -14,7 +14,7 @@ import org.apache.commons.math3.linear.RealVector;
  */
 
 public class Kalman {
-    long dt=2; // time of new accel (2 millisec)
+    double dt=0.002; // time of new accel (2 millisec)
     double accelNoise;
     double measurementNoise;
     KalmanFilter filter;
@@ -48,7 +48,7 @@ public class Kalman {
     dt 0
     0 dt*/
         RealMatrix B = new Array2DRowRealMatrix(new double[][]{{Math.pow(dt, 2d) / 2d, 0},
-                {0, (dt ^ 2) / 2},
+                {0, (dt*dt) / 2},
                 {dt, 0,},
                 {0, dt,}});
 /*    H
@@ -65,10 +65,10 @@ public class Kalman {
         // P0 = [ 10 0 ]
 //      [ 0 10 ]
         //TODO changed dim of P0
-        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{10,0,0,0},
-                {0, 10, 0, 0},
-                {0, 0, 10, 0},
-                {0, 0, 0, 10}});
+        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{10000000,0,0,0},
+                {0, 10000000, 0, 0},
+                {0, 0, 10000000, 0},
+                {0, 0, 0, 10000000}});
 
         // R = [ measurementNoise^2 ]
         RealMatrix R = new Array2DRowRealMatrix(new double[][]{{Math.pow(measurementNoise, 2),

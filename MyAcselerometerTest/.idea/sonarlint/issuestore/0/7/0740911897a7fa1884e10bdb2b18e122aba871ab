@@ -1,13 +1,13 @@
 
-?squid:S2131"Use "Double.toString" instead.(Ã™Æáûÿÿÿÿ8ü •½+
-?squid:S2131"Use "Double.toString" instead.(×ı¹ÿÿÿÿÿ8Ì¼Š•½+
-?squid:S2131"Use "Double.toString" instead.(ÚÊûµûÿÿÿÿ8®õÀ•½+
-`squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¸èï˜
-:squid:S2131"Use "Double.toString" instead.(…Öû³8Ú¾Á•½+
-Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ã‰Äáûÿÿÿÿ
-e
-squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(ô±Éûÿÿÿÿ
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¡¯âşÿÿÿÿ8´û¾•½+
 `squid:S1192"FDefine a constant instead of duplicating this literal "%1.3f" 4 times.(ùÛ¥¢şÿÿÿÿ
 Gsquid:S1199"-Extract this nested code block into a method.(Ùşí‰şÿÿÿÿ
+e
+squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(ô±Éûÿÿÿÿ
+`squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¸èï˜
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¡¯âşÿÿÿÿ
 –squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ĞŠß±
+8squid:S2131"Use "Double.toString" instead.(×ı¹ÿÿÿÿÿ
+8squid:S2131"Use "Double.toString" instead.(ÚÊûµûÿÿÿÿ
+8squid:S2131"Use "Double.toString" instead.(Ã™Æáûÿÿÿÿ
+3squid:S2131"Use "Double.toString" instead.(…Öû³
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ã‰Äáûÿÿÿÿ
