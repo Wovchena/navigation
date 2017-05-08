@@ -77,7 +77,6 @@ public class Data {
                     RealCoordForF[1], 2);
         }
         res[1]=sqrt(filterDeviationSumm/filter.size())/1000; // in meters
-        //TODO some tests are needed
         return res; // среднеквадратичное отклонение для indoors and Kalman
     }
 }

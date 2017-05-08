@@ -69,7 +69,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     private IndoorsSurfaceFragment indoorsSurfaceFragment = null;
     private Toast progressToast;
     private static int lastProgress = 0;
-    private static String LICENSEKEY = "54c244e7-be8b-446a-b320-ad008109ac7e";
+    private static String LICENSEKEY = "58d4a963-98a5-411b-8c30-a4659cc8d3d6";
     private boolean connected = false;
     IndoorsSurfaceFactory.Builder surfaceBuilder;
     private boolean firstCall = false; // определение готовности индор сервиса (был ли сделан
@@ -82,7 +82,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     Building building = null;
     double accelNoise = 10.357431855947539;
     double measurementNoise = 600;
-    Coordinate currentPosition;
+    Coordinate currentPosition = null;
     RedSurfaceOverlay overlayKalman = null;
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -154,19 +154,21 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                 }
                 return true;
             case R.id.menu_stopMesurement:
-                double[] standartDeviations = data.calc(SystemClock.uptimeMillis());
-                accel.stop();
-                kalman = null;
-                fragment.addItem(pagedActivity, indoorsSurfaceFragment, "Deviation for indoors=" +
-                        standartDeviations[0] + "; and for Kalman=" + standartDeviations[1], new Coordinate(0, 0, 0));
+                if (null != data) {
+                    double[] standartDeviations = data.calc(SystemClock.uptimeMillis());
+                    accel.stop();
+                    kalman = null;
+                    fragment.addItem(pagedActivity, indoorsSurfaceFragment, "Deviation for indoors=" +
+                            standartDeviations[0] + "; and for Kalman=" + standartDeviations[1], new Coordinate(0, 0, 0));
 
 
-                Toast.makeText(this, "Deviation for indoors=" + standartDeviations[0] + "; and for " +
-                        "Kalman=" + standartDeviations[1], Toast.LENGTH_LONG).show();
-                data = null;
-                if (overlayKalman!=null) {
-                    indoorsSurfaceFragment.removeOverlay(overlayKalman);
-                    indoorsSurfaceFragment.updateSurface();
+                    Toast.makeText(this, "Deviation for indoors=" + standartDeviations[0] + "; and for " +
+                            "Kalman=" + standartDeviations[1], Toast.LENGTH_LONG).show();
+                    data = null;
+                    if (overlayKalman != null) {
+                        indoorsSurfaceFragment.removeOverlay(overlayKalman);
+                        indoorsSurfaceFragment.updateSurface();
+                    }
                 }
                 return true;
             default:
@@ -285,7 +287,6 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-
 
 
     public IndoorsSurfaceFragment createIndoorsFragment() {
@@ -410,7 +411,8 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
                         }
                         Toast.makeText(PagedActivity.this, "mesureMode=LINEMODE, but strange values of twoPoints[]", Toast.LENGTH_LONG).show();
                     }
-                    Toast.makeText(PagedActivity.this, "All points are efined", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PagedActivity.this, "All points are defined", Toast
+                            .LENGTH_LONG).show();
 
                 }
             });
@@ -433,15 +435,13 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
         parameters.setUseStabilizationFilter(false);
         indoorsBuilder.setLocalizationParameters(parameters);
         /**
-         * TODO: replace this with your API-key
          * This is your API key as set on https://api.indoo.rs
          */
         indoorsBuilder.setApiKey(LICENSEKEY);
         /**
-         * TODO: replace 12345 with the id of the building you uploaded to our cloud using the MMT
          * This is the ID of the Building as shown in the desktop Measurement Tool (MMT)
          */
-        indoorsBuilder.setBuildingId((long) 991719462);
+        indoorsBuilder.setBuildingId((long) 991841068);
         // callback for indoo.rs-events
         indoorsBuilder.setUserInteractionListener(this);
 
@@ -646,8 +646,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
      */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("Paged Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
+                .setName("Paged Page")
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();
         return new Action.Builder(Action.TYPE_VIEW)
@@ -689,10 +688,10 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
             double[] estimatedState;
             estimatedState = kalman.getStateEstimationVector().toArray();
             data.addToFilter(time, new Coordinate((int) estimatedState[0], (int) estimatedState[1], FLOORLVL));
-            Log.d("velocityvelocity", ""+estimatedState[2]+" | "+ estimatedState[3]);
+            Log.d("velocityvelocity", "" + estimatedState[2] + " | " + estimatedState[3]);
             if (null != overlayKalman) {
                 indoorsSurfaceFragment.removeOverlay(overlayKalman);
-                overlayKalman=null;
+                overlayKalman = null;
             }
             overlayKalman = new RedSurfaceOverlay(new Coordinate((int)
                     estimatedState[0], (int) estimatedState[1], FLOORLVL));

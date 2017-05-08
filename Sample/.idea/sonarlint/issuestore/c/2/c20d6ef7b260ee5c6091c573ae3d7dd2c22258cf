@@ -1,0 +1,21 @@
+
+6squid:S1170"!Make this final field static too.(ò‚¼¯
+Gsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ñ”Ò
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„äî ûÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œƒƒ©ùÿÿÿÿ
+2squid:S2131"Use "Double.toString" instead.(ı·>
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÛô’ùÿÿÿÿ
+asquid:S1192"GDefine a constant instead of duplicating this literal "Cancel" 3 times.(º¶–·ÿÿÿÿÿ
+=squid:S1481"(Remove this unused "tmp" local variable.(èİã
+Isquid:S1066"/Merge this if statement with the enclosing one.(Ïóæøÿÿÿÿ
+Lsquid:S1854"7Remove this useless assignment to local variable "tmp".(èİã
+6squid:S1700"Rename field "pagedActivity"(¤ü†Çıÿÿÿÿ
+;squid:S1170"!Make this final field static too.(è–¹°şÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨æä‡ûÿÿÿÿ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦±“­
+osquid:S3008"URename this field "LICENSEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¬¤×üÿÿÿÿ
+Bsquid:S1125"(Remove the literal "true" boolean value.(ğ­Å‰ÿÿÿÿÿ
+Csquid:S1125")Remove the literal "false" boolean value.(ğ­Å‰ÿÿÿÿÿ
+Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¡áø
+dsquid:S1132"JMove the "Disc" string literal on the left side of this string comparison.(‡İï¶ıÿÿÿÿ

@@ -89,7 +89,6 @@ Log.d("rotatinrotation", ""+rotation);
             counter++;
             meanAInReal[0]+=aInReal[0];
             meanAInReal[1]+=aInReal[1];
-            //TODO is rotation right?
             //pass only x and y in accelData to onAccelCahnged()
             if (currentT-lastTimeSend>=2) {//passed 2 millisec
                 meanAInReal[0]=meanAInReal[0]/counter;

@@ -54,17 +54,14 @@ public class Kalman {
 /*    H
     1 0 0 0
     0 1 0 0*/
-        //TODO check how mesurement phase is performed
         RealMatrix H = new Array2DRowRealMatrix(new double[][]{{1, 0, 0 ,0},
                 {0, 1, 0, 0}});
 
-        //TODO Q matrix (cov)
         // это матожидание квадрата разностей
         //Q=accelNoise*B*BT
         RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise * accelNoise);
         // P0 = [ 10 0 ]
 //      [ 0 10 ]
-        //TODO changed dim of P0
         RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{10000000,0,0,0},
                 {0, 10000000, 0, 0},
                 {0, 0, 10000000, 0},
