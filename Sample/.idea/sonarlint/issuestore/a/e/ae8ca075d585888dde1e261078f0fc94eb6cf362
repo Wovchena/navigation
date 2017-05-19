@@ -1,9 +1,9 @@
 
 _squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV
-7squid:S2131"Use "Float.toString" instead.(Üø”Öüÿÿÿÿ
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¸„¯üÿÿÿÿ
-3squid:S2131"Use "Double.toString" instead.(”ã«ş
 8squid:S2131"Use "Double.toString" instead.(¨ŸÄûÿÿÿÿ
-8squid:S2131"Use "Double.toString" instead.(ÏğÉÊüÿÿÿÿ
 lsquid:S1450"WRemove the "aInBasic" field and declare it as a local variable in the relevant methods.(İ•Ïâ
+8squid:S2131"Use "Double.toString" instead.(ÏğÉÊüÿÿÿÿ
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¸„¯üÿÿÿÿ
 rsquid:S1450"XRemove the "accelData" field and declare it as a local variable in the relevant methods.(åºÜÃùÿÿÿÿ
+3squid:S2131"Use "Double.toString" instead.(”ã«ş
+7squid:S2131"Use "Float.toString" instead.(Üø”Öüÿÿÿÿ

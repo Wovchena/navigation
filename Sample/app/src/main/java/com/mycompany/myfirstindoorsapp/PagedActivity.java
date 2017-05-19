@@ -81,7 +81,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     float rotation = 0; //Real world orientation of this building in degrees. 0 is north.
     Building building = null;
     double accelNoise = 10.357431855947539;
-    double measurementNoise = 600;
+    double measurementNoise = 5000;
     Coordinate currentPosition = null;
     RedSurfaceOverlay overlayKalman = null;
 
@@ -273,7 +273,7 @@ public class PagedActivity extends AppCompatActivity implements IndoorsLocationL
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent msg) {
         if (requestCode == REQUEST_CODE_LOCATION) {
             // Check if the user has really enabled Location services.
             checkLocationIsEnabled();

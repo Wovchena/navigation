@@ -58,19 +58,20 @@ public class Kalman {
                 {0, 1, 0, 0}});
 
         // это матожидание квадрата разностей
-        //Q=accelNoise*B*BT
+        //Q=B*BT*accelNoise^2
         RealMatrix Q = B.multiply(B.transpose()).scalarMultiply(accelNoise * accelNoise);
-        // P0 = [ 10 0 ]
-//      [ 0 10 ]
-        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{10000000,0,0,0},
-                {0, 10000000, 0, 0},
-                {0, 0, 10000000, 0},
-                {0, 0, 0, 10000000}});
+
 
         // R = [ measurementNoise^2 ]
-        RealMatrix R = new Array2DRowRealMatrix(new double[][]{{Math.pow(measurementNoise, 2),
-                0},
+        RealMatrix R = new Array2DRowRealMatrix(new double[][]{{Math.pow(measurementNoise, 2), 0},
                 {0, Math.pow(measurementNoise, 2)}});
+
+        // P0 = [ 10 0 ]
+//      [ 0 10 ]
+        RealMatrix P0 = new Array2DRowRealMatrix(new double[][]{{measurementNoise*measurementNoise,0,0,0},
+                {0, measurementNoise*measurementNoise, 0, 0},
+                {0, 0, measurementNoise*measurementNoise, 0},
+                {0, 0, 0, measurementNoise*measurementNoise}});
 
 
         ProcessModel pm = new DefaultProcessModel(A, B, Q, x, P0);
