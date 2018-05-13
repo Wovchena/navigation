@@ -1,1 +1,1 @@
-# navigation
+# Indoors navigation with BLE beacons
